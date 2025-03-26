@@ -233,6 +233,18 @@ export const skills = [
     title: "Mysql",
     percentage: "75",
   },
+
+  {
+    id: 7,
+    title: "Next js",
+    percentage: "10",
+  },
+
+  {
+    id: 7,
+    title: "Nest js",
+    percentage: "10",
+  },
 ];
 
 export const portfolio = [

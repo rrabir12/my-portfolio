@@ -24,6 +24,17 @@ info_list .info_description {
   font-weight: var(--weight-600);
 }
 
+.stats_title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 22%;
+  width: 34px;
+  height: 5px;
+  border-radius: 10px;
+  background-color: var(--first-color);
+}
+
 .stats_box{
   border: 1px solid var(--border-color);
   padding: 20px 30px 25px;
