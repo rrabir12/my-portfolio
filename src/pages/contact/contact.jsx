@@ -1,12 +1,16 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { FaEnvelopeOpen, FaPhoneSquareAlt, FaFacebookF, FaTwitter, FaYoutube, FaDribbble } from "react-icons/fa";
 import { FiSend } from "react-icons/fi";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaGithubAlt } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa6";
 import "./contact.css";
 
 function Contact() {
   const form = useRef();
-  const [isSent, setIsSent] = useState(false);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -19,14 +23,12 @@ function Contact() {
         "52iljLFXnqCyso1I9" 
       )
       .then(
-        (result) => {
-          console.log("Email sent:", result.text);
-          setIsSent(true);
-          setTimeout(() => setIsSent(false), 5000);
+        () => {
+          toast.success("Message sent successfully!");
           e.target.reset();
         },
-        (error) => {
-          console.error("Email send error:", error.text);
+        () => {
+          toast.error("Failed to send message. Please try again.");
         }
       );
   };
@@ -62,10 +64,10 @@ function Contact() {
             </div>
 
             <div className="contact_socials">
-              <a href="https://facebook.com" className="contact_social_link"><FaFacebookF /></a>
-              <a href="https://twitter.com" className="contact_social_link"><FaTwitter /></a>
-              <a href="https://youtube.com" className="contact_social_link"><FaYoutube /></a>
-              <a href="https://dribble.com" className="contact_social_link"><FaDribbble /></a>
+              <a href="https://www.facebook.com/profile.php?id=100067461679136" target="_blank" className="contact_social_link"><FaFacebookF /></a>
+              <a href="https://github.com/rrabir12" target="_blank" className="contact_social_link"><FaGithubAlt /></a>
+              <a href="www.linkedin.com/in/rabi-roy-821466272" target="_blank" className="contact_social_link"><FaLinkedinIn /></a>
+              <a href="https://www.instagram.com/i_rabiroy/" target="_blank" className="contact_social_link">< FaInstagram /></a>
             </div>
           </div>
         </div>
@@ -92,10 +94,10 @@ function Contact() {
           <button type="submit" className="button" style={{cursor: "pointer"}}>
             Send Message <span className="button_icon contact_button_icon"><FiSend /></span>
           </button>
-
-          {isSent && <p className="success_message">Message sent successfully!</p>}
         </form>
       </div>
+
+      <ToastContainer position="top-right" autoClose={3000} />
     </section>
   );
 }
