@@ -259,7 +259,7 @@ export const portfolio = [
       {
         icon: <FiExternalLink />,
         title: "Preview : ",
-        desc: "https://directory-web-portal.vercel.app/",
+        desc: <a href="https://directory-web-portal.vercel.app/" target="_blank" rel="noopener noreferrer" className="custom-link">View</a>,
       },
     ],
   },
@@ -287,7 +287,7 @@ export const portfolio = [
       {
         icon: <FiExternalLink />,
         title: "Preview : ",
-        desc: "https://nobroker-application.vercel.app/",
+        desc: <a href="https://nobroker-application.vercel.app/" className="custom-link" target="_blank" rel="noopener noreferrer">View</a>,
       },
     ],
   },
@@ -315,7 +315,7 @@ export const portfolio = [
       {
         icon: <FiExternalLink />,
         title: "Preview : ",
-        desc: "https://github.com/rrabir12/E-commerce-Website",
+        desc: <a href="https://github.com/rrabir12/E-commerce-Website" className="custom-link" target="_blank" rel="noopener noreferrer">View</a>,
       },
     ],
   },
@@ -343,7 +343,7 @@ export const portfolio = [
       {
         icon: <FiExternalLink />,
         title: "Preview : ",
-        desc: "https://click-digital-rouge.vercel.app/",
+        desc: <a href="https://click-digital-rouge.vercel.app/" className="custom-link" target="_blank" rel="noopener noreferrer">View</a>,
       },
     ],
   },
@@ -367,7 +367,7 @@ export const portfolio = [
       },
       {
         title: "Preview : ",
-        desc: "https://tinyurl.com/39z57mr4",
+        desc: <a href="https://tinyurl.com/39z57mr4" className="custom-link" target="_blank" rel="noopener noreferrer">View</a>,
       },
     ],
   },
@@ -395,7 +395,7 @@ export const portfolio = [
       {
         icon: <FiExternalLink />,
         title: "Preview : ",
-        desc: "https://tinyurl.com/659dxknu",
+        desc: <a href="https://tinyurl.com/659dxknu" className="custom-link" target="_blank" rel="noopener noreferrer">View</a>,
       },
     ],
   },
@@ -422,7 +422,7 @@ export const portfolio = [
       {
         icon: <FiExternalLink />,
         title: "Preview : ",
-        desc: "https://tinyurl.com/487w5tst",
+        desc: <a href="https://tinyurl.com/487w5tst" className="custom-link" target="_blank" rel="noopener noreferrer">View</a>,
       },
     ],
   },
@@ -449,10 +449,11 @@ export const portfolio = [
       {
         icon: <FiExternalLink />,
         title: "Preview : ",
-        desc: "https://tinyurl.com/3jdzrmhr",
+        desc: <a href="https://tinyurl.com/3jdzrmhr" className="custom-link" target="_blank" rel="noopener noreferrer">View</a>,
       },
     ],
-  },
+  }
+  
 ];
 
 export const themes = [

@@ -174,3 +174,12 @@ img{
  text-align: center;
  line-height: 60px;
 }
+
+.custom-link{
+  color: var(--first-color);
+  font-weight: bold;
+}
+
+.custom-link:hover{
+  text-decoration: underline;
+}
