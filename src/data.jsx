@@ -207,7 +207,7 @@ export const skills = [
   {
     id: 8,
     title: "React",
-    percentage: "45",
+    percentage: "65",
   },
 
   {
