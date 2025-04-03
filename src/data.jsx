@@ -355,7 +355,7 @@ export const portfolio = [
       {
         icon: <FiExternalLink />,
         title: "Preview : ",
-        desc: <a href="https://click-digital-rouge.vercel.app/" className="custom-link" target="_blank" rel="noopener noreferrer">View</a>,
+        desc: <a href="https://clickdigitals.com.np/" className="custom-link" target="_blank" rel="noopener noreferrer">View</a>,
       },
     ],
   },
