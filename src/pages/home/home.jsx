@@ -6,6 +6,7 @@ import './home.css'
 
 function Home() {
   return (
+    <>
     <section className="home section grid">
       <img src={profile} alt="" className="home_img" />
 
@@ -30,6 +31,7 @@ function Home() {
 
       <div className="color_block"></div>
     </section>
+    </>
   )
 }
 

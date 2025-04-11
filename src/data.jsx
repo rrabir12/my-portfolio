@@ -87,7 +87,7 @@ export const personalInfo = [
   {
     id: 5,
     title: "Freelance : ",
-    description: "Not Available",
+    description: "Available",
   },
 
   {
