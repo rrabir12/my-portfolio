@@ -205,7 +205,7 @@ export const skills = [
   },
 
   {
-    id: 8,
+    id: 4,
     title: "React",
     percentage: "65",
   },
@@ -217,31 +217,37 @@ export const skills = [
   },
 
   {
-    id: 4,
+    id: 6,
+    title: "Python",
+    percentage: "40",
+  },
+
+  {
+    id: 7,
     title: "Php",
     percentage: "30",
   },
 
   {
-    id: 6,
+    id: 8,
     title: "Wordpress",
     percentage: "75",
   },
 
   {
-    id: 7,
+    id: 9,
     title: "Mysql",
     percentage: "75",
   },
 
   {
-    id: 7,
+    id: 10,
     title: "Next js",
     percentage: "10",
   },
 
   {
-    id: 7,
+    id: 11,
     title: "Nest js",
     percentage: "10",
   },
