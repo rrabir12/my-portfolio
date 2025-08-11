@@ -10,7 +10,7 @@ import Skills from "../../components/Skills";
 
 function About() {
   return (
-    <main className="section container">
+    <section className="section container" id="about">
       <section className="about">
         <h2 className="section_title">
           About <span>Me</span>
@@ -27,7 +27,7 @@ function About() {
             <a href={CV} download="" className="button">
               Download CV{" "}
               <span className="button_icon">
-                <FaDownload />
+                <FaDownload className="!ms-4 !mt-5"/>
               </span>
             </a>
           </div>
@@ -73,7 +73,7 @@ function About() {
           </div>
         </div>
       </section>
-    </main>
+    </section>
   );
 }
 

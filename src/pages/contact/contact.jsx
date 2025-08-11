@@ -66,7 +66,7 @@ function Contact() {
   };
 
   return (
-    <section className="contact section">
+    <section className="contact section" id="contact">
       <h2 className="section_title">
         Get In<span>Touch</span>
       </h2>
@@ -103,28 +103,28 @@ function Contact() {
                 target="_blank"
                 className="contact_social_link"
               >
-                <FaFacebookF />
+                <FaFacebookF className="!mt-3 !ms-3"/>
               </a>
               <a
                 href="https://github.com/rrabir12"
                 target="_blank"
                 className="contact_social_link"
               >
-                <FaGithubAlt />
+                <FaGithubAlt className="!mt-3 !ms-3" />
               </a>
               <a
                 href="www.linkedin.com/in/rabi-roy-821466272"
                 target="_blank"
                 className="contact_social_link"
               >
-                <FaLinkedinIn />
+                <FaLinkedinIn className="!mt-3 !ms-3" />
               </a>
               <a
                 href="https://www.instagram.com/i_rabiroy/"
                 target="_blank"
                 className="contact_social_link"
               >
-                <FaInstagram />
+                <FaInstagram className="!mt-3 !ms-3" />
               </a>
             </div>
           </div>
@@ -211,7 +211,7 @@ function Contact() {
           >
             Send Message{" "}
             <span className="button_icon contact_button_icon">
-              <FiSend />
+              <FiSend className="!mt-5 !ms-4" />
             </span>
           </button>
         </form>

@@ -34,28 +34,35 @@ export const links = [
     id: 1,
     name: "Home",
     icon: <FaHome className="nav__icon" />,
-    path: "/",
+    path: "#home",
   },
 
   {
     id: 2,
     name: "About",
     icon: <FaUser className="nav__icon" />,
-    path: "/about",
+    path: "#about",
   },
+
+  // {
+  //   id: 2,
+  //   name: "Skills",
+  //   icon: <FaUser className="nav__icon" />,
+  //   path: "#skills",
+  // },
 
   {
     id: 3,
     name: "Portfolio",
     icon: <FaFolderOpen className="nav__icon" />,
-    path: "/portfolio",
+    path: "#portfolio",
   },
 
   {
     id: 4,
     name: "Contact",
     icon: <FaEnvelopeOpen className="nav__icon" />,
-    path: "/contact",
+    path: "#contact",
   },
 ];
 
@@ -151,7 +158,7 @@ export const resume = [
   {
     id: 1,
     category: "experience",
-    icon: <FaBriefcase />,
+    icon: <FaBriefcase className="!mt-3 !ms-3"/>,
     year: "2024-2025",
     title: "Frontend Developer Intern <span> Blue Fox pvt ltd </span>",
     desc: "Worked on building responsive web interfaces using React, Bootstrap, and Tailwind. Improved UI performance and collaborated with designers to enhance the user experience.",
@@ -160,7 +167,7 @@ export const resume = [
   {
     id: 2,
     category: "experience",
-    icon: <FaBriefcase />,
+    icon: <FaBriefcase className="!mt-3 !ms-3"/>,
     year: "2024",
     title: "UI/UX Designer Intern <span> IT Service Nepal </span>",
     desc: "Designed and prototyped user interfaces in Figma, conducted user research, and optimized web and mobile experiences to enhance usability and engagement.",
@@ -169,7 +176,7 @@ export const resume = [
   {
     id: 3,
     category: "education",
-    icon: <FaGraduationCap />,
+    icon: <FaGraduationCap className="!mt-2 !ms-3 text-xl"/>,
     year: "2025",
     title: "Bachelor Degree <span> Purbanchal University </span>",
     desc: "Pursuing a Bachelor's degree with a focus on IT. Gained in-depth knowledge of Programming, hands-on experience in Projects, and skills in HTML, CSS, JS, React, Tailwind, PHP, Mysql.",
@@ -178,7 +185,7 @@ export const resume = [
   {
     id: 4,
     category: "education",
-    icon: <FaGraduationCap />,
+    icon: <FaGraduationCap className="!mt-2 !ms-3 text-xl"/>,
     year: "2020",
     title: "Plus 2 Degree <span> Triton College, Kathmandu </span>",
     desc: "Completed high school with a specialization in Science. Developed a strong foundation in Computer.",

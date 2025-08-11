@@ -119,13 +119,13 @@ info_list .info_description {
 .resume_icon{
   position: absolute;
   left: 0;
-  top: 0;
+  top: -5px;
   background-color: var(--first-color);
   color: var(--text-white);
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  text-align: center;
+  text-align: center !important;
   line-height: 40px;
 }
 
