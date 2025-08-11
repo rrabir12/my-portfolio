@@ -13,10 +13,9 @@ function Navbar() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 0);
 
-      // Detect which section is currently in view
       let current = "";
       document.querySelectorAll("section[id]").forEach((section) => {
-        const sectionTop = section.offsetTop - 80; // offset for navbar height
+        const sectionTop = section.offsetTop - 80;
         const sectionHeight = section.clientHeight;
         if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
           current = section.getAttribute("id");
@@ -61,9 +60,14 @@ function Navbar() {
                 {name}
               </a>
             ))}
+            {/* Desktop "Let's Talk" button */}
+            <button
+              type="button"
+              className="!ms-48 focus:outline-none text-white !bg-[#4d36a5] hover:!bg-[#3c259b] !font-medium !rounded-lg !text-sm !px-5 !py-2.5 !me-2"
+            >
+              <a href="/#contact">Let's Talk</a>
+            </button>
           </div>
-
-          <button type="button" class="focus:outline-none text-white !bg-[#4d36a5] hover:!bg-[#3c259b]  !font-medium !rounded-lg !text-sm !px-5 !py-2.5 !me-2"><a href="/#contact">Let's Talk</a></button>
 
           {/* Mobile Menu Button */}
           <button
@@ -101,6 +105,14 @@ function Navbar() {
                   {name}
                 </a>
               ))}
+              {/* Mobile "Let's Talk" button */}
+              <button
+                type="button"
+                className="mt-4 w-full text-center focus:outline-none text-white !bg-[#4d36a5] hover:!bg-[#3c259b] !font-medium !rounded-lg !text-sm !px-5 !py-2.5"
+                onClick={closeMobileMenu}
+              >
+                <a href="/#contact">Let's Talk</a>
+              </button>
             </div>
           </div>
         </div>

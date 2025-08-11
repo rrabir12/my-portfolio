@@ -7,7 +7,7 @@ function Portfolio() {
   return (
     <div>
       <section className="portfolio section" id='portfolio'>
-        <h2 className="section_title">My <span>Portfolio</span></h2>
+        <h2 className="section_title">My <span>Project</span></h2>
 
         <div className="portfolio_container container grid">
           {portfolio.map((item) => {
