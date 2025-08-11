@@ -47,7 +47,7 @@ function Footer() {
                     href="https://github.com/rrabir12"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:bg-[#D9A520] hover:text-white bg-[#F2F2F2] !p-3 rounded-full flex items-center justify-center"
+                    className="hover:bg-[#4d36a5] hover:text-white bg-[#F2F2F2] !p-3 rounded-full flex items-center justify-center"
                   >
                     <FaGithubAlt className="!text-xl" />
                   </a>
@@ -57,7 +57,7 @@ function Footer() {
                     href="www.linkedin.com/in/rabi-roy-821466272"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="hover:bg-[#D9A520] hover:text-white bg-[#F2F2F2] !p-3 rounded-full flex items-center justify-center"
+                    className="hover:bg-[#4d36a5] hover:text-white bg-[#F2F2F2] !p-3 rounded-full flex items-center justify-center"
                   >
                     <FaLinkedinIn className="!text-xl" />
                   </a>
