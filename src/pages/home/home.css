@@ -29,6 +29,14 @@
   padding-left: 70px;
 }
 
+.type{
+position: relative !important;
+  font-size: var(--h1-font-size) !important;
+  line-height: 1.24 !important;
+  /* padding-left: 70px !important; */
+  /* font-weight: 700 !important; */
+}
+
 .home_title span{
   color: var(--first-color);
 }

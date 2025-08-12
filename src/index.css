@@ -5,6 +5,10 @@ html{
   scroll-behavior: smooth;
 }
 
+/* body{
+  background-color: #121212 !important;
+} */
+
 @media screen and (max-width: 1400px){
   .container{
     max-width: calc(100% - 180px);

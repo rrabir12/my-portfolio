@@ -17,6 +17,8 @@ import Work5 from "./assets/hrms.png";
 import Work6 from "./assets/NikeHome.png";
 import Work7 from "./assets/CryptoApp.png";
 import Work8 from "./assets/DirectoryWebHome.png";
+import Work9 from "./assets/talentlink.png"
+import Work10 from "./assets/recipePage.jpg"
 
 import Theme1 from "./assets/purple.png";
 import Theme2 from "./assets/red.png";
@@ -261,6 +263,62 @@ export const skills = [
 ];
 
 export const portfolio = [
+{
+    id: 1,
+    img: Work9,
+    title: "FullStack Website",
+    details: [
+      {
+        icon: <FiFileText />,
+        title: "Project : ",
+        desc: "TalentLink website",
+      },
+      {
+        icon: <FiUser />,
+        title: "Client : ",
+        desc: "Hackathon Project",
+      },
+      {
+        icon: <FaCode />,
+        title: "Language : ",
+        desc: "React js, Tailwind, Firebase",
+      },
+      {
+        icon: <FiExternalLink />,
+        title: "Preview : ",
+        desc: <a href="https://github.com/EverestNinja/pusat_iicquest" target="_blank" rel="noopener noreferrer" className="custom-link">View</a>,
+      },
+    ],
+  },
+
+  {
+    id: 1,
+    img: Work10,
+    title: "FullStack Mobile App",
+    details: [
+      {
+        icon: <FiFileText />,
+        title: "Project : ",
+        desc: "Recipe Finder App",
+      },
+      {
+        icon: <FiUser />,
+        title: "Client : ",
+        desc: "Final Year Project",
+      },
+      {
+        icon: <FaCode />,
+        title: "Language : ",
+        desc: "React Native, Nativewind, neon, drizzle, clerk",
+      },
+      {
+        icon: <FiExternalLink />,
+        title: "Preview : ",
+        desc: <a href="https://github.com/rrabir12/mobile" target="_blank" rel="noopener noreferrer" className="custom-link">View</a>,
+      },
+    ],
+  },
+
   {
     id: 1,
     img: Work1,
