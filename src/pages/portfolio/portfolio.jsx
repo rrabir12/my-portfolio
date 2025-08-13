@@ -71,7 +71,7 @@ function Portfolio() {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }} // triggers when 20% of the section is visible
+        viewport={{ once: true, amount: 0.001 }} // triggers when 20% of the section is visible
       >
         <AnimatePresence>
           {filteredPortfolio.map((item, index) => {
