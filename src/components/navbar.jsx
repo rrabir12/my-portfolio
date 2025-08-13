@@ -37,7 +37,7 @@ function Navbar() {
   return (
     <nav
       className={`fixed w-full z-50 top-0 start-0 transition-all duration-500 ${
-        isScrolled ? "!py-2 bg-[#6856AE] modern-glass" : "!py-4 bg-[#6856AE]"
+        isScrolled ? "!py-4 bg-[#6856AE] modern-glass" : "!py-4 bg-[#6856AE]"
       }`}
     >
       <div className="max-w-7xl mx-auto !px-6">
