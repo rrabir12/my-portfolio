@@ -14,7 +14,7 @@ function Footer() {
               <h2 className="!mb-3 !text-sm !font-semibold  !uppercase !text-white">
                 Resources
               </h2>
-              <ul className="!text-gray-500 dark:!text-gray-400 !font-medium">
+              <ul className="!text-gray-500 dark:!text-gray-300 !font-medium">
                 <li className="!mb-1">
                   <a href="#home" className="hover:!underline">
                     Home
@@ -67,9 +67,9 @@ function Footer() {
             </div>
           </div>
         </div>
-        <hr className="!my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" style={{border: "1px solid gray,"}}/>
+        <hr className="!my-6 !border-gray-500 sm:mx-auto dark:border-gray-700 lg:my-8" style={{border: "1px solid gray,"}}/>
         <div className="sm:flex sm:items-center sm:justify-between lg:items-center lg:justify-center">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-300">
             © 2024{" "}
             <a href="/" className="hover:underline">
                Rabi Portfolio

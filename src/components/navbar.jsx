@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import './navbar.css';
-import { links } from '../data';
+import "./navbar.css";
+import { links } from "../data";
 
 function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -15,9 +15,12 @@ function Navbar() {
 
       let current = "";
       document.querySelectorAll("section[id]").forEach((section) => {
-        const sectionTop = section.offsetTop - 80;
+        const sectionTop = section.offsetTop - 90;
         const sectionHeight = section.clientHeight;
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+        if (
+          window.scrollY >= sectionTop &&
+          window.scrollY < sectionTop + sectionHeight
+        ) {
           current = section.getAttribute("id");
         }
       });
@@ -74,7 +77,12 @@ function Navbar() {
             className="lg:hidden modern-button p-2 rounded-lg"
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -87,32 +95,37 @@ function Navbar() {
 
         {/* Mobile Navigation Menu */}
         <div
-          className={`lg:hidden transition-all duration-300 ease-in-out ${
-            isMobileMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0 overflow-hidden"
+          className={`lg:hidden transition-all !mt-5 duration-500 ease-in-out ${
+            isMobileMenuOpen
+              ? "max-h-screen opacity-100 translate-y-0"
+              : "max-h-0 opacity-0 -translate-y-2 overflow-hidden"
           }`}
         >
-          <div className="rounded-xl modern-glass-mobile p-4">
+          <div className="!rounded-xl !bg-[#1c1b29]/80 !backdrop-blur-lg !p-5 !shadow-lg !border !border-white/10">
             <div className="flex flex-col gap-2">
               {links.map(({ name, path }) => (
                 <a
                   key={path}
-                  className={`w-full px-4 py-3 text-white/90 hover:text-white font-medium text-sm modern-nav-item-mobile ${
-                    activeSection === path.replace("#", "") ? "bg-[#4d36a5] text-white" : ""
-                  }`}
                   href={path}
                   onClick={closeMobileMenu}
+                  className={`!w-full !px-5 !py-3 text-white/90 hover:!text-white font-medium text-sm rounded-lg transition-colors duration-300 ${
+                    activeSection === path.replace("#", "")
+                      ? "bg-[#4d36a5] text-white shadow-md"
+                      : "hover:bg-white/10"
+                  }`}
                 >
                   {name}
                 </a>
               ))}
+
               {/* Mobile "Let's Talk" button */}
-              <button
-                type="button"
-                className="mt-4 w-full text-center focus:outline-none text-white !bg-[#4d36a5] hover:!bg-[#3c259b] !font-medium !rounded-lg !text-sm !px-5 !py-2.5"
+              <a
+                href="/#contact"
                 onClick={closeMobileMenu}
+                className="!mt-4 w-full text-center bg-[#4d36a5] hover:bg-[#3c259b] text-white font-medium rounded-lg text-sm !px-5 !py-3 transition-colors duration-300 shadow-md"
               >
-                <a href="/#contact">Let's Talk</a>
-              </button>
+                Let's Talk
+              </a>
             </div>
           </div>
         </div>

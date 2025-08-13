@@ -13,7 +13,7 @@ function App() {
   return (
     <BrowserRouter >
       <Navbar />
-      <Themes />
+      {/* <Themes /> */}
       <Home />
       <About />
       <Portfolio />

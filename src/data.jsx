@@ -266,6 +266,7 @@ export const portfolio = [
 {
     id: 1,
     img: Work9,
+    category: "Website",
     title: "FullStack Website",
     details: [
       {
@@ -292,8 +293,9 @@ export const portfolio = [
   },
 
   {
-    id: 1,
+    id: 2,
     img: Work10,
+    category: "Mobile",
     title: "FullStack Mobile App",
     details: [
       {
@@ -320,8 +322,9 @@ export const portfolio = [
   },
 
   {
-    id: 1,
+    id: 3,
     img: Work1,
+    category: "Website",
     title: "Website Frontend",
     details: [
       {
@@ -348,8 +351,9 @@ export const portfolio = [
   },
 
   {
-    id: 2,
+    id: 4,
     img: Work2,
+    category: "Website",
     title: "Website Frontend",
     details: [
       {
@@ -376,9 +380,10 @@ export const portfolio = [
   },
 
   {
-    id: 3,
+    id: 5,
     img: Work3,
-    title: "Website",
+    category: "Website",
+    title: "FullStack Website",
     details: [
       {
         icon: <FiFileText />,
@@ -404,8 +409,9 @@ export const portfolio = [
   },
 
   {
-    id: 4,
+    id: 6,
     img: Work4,
+    category: "Website",
     title: "Website",
     details: [
       {
@@ -416,7 +422,7 @@ export const portfolio = [
       {
         icon: <FiUser />,
         title: "Client : ",
-        desc: "Click digitals",
+        desc: "Click digitals pvt. ltd.",
       },
       {
         icon: <FaCode />,
@@ -432,8 +438,9 @@ export const portfolio = [
   },
 
   {
-    id: 5,
+    id: 7,
     img: Work5,
+    category: "Design",
     title: "Website Design",
     details: [
       {
@@ -456,8 +463,9 @@ export const portfolio = [
   },
 
   {
-    id: 6,
+    id: 8,
     img: Work6,
+    category: "Design",
     title: "Design",
     details: [
       {
@@ -483,8 +491,9 @@ export const portfolio = [
     ],
   },
   {
-    id: 7,
+    id: 9,
     img: Work7,
+    category: "Design",
     title: "Design",
     details: [
       {
@@ -510,8 +519,9 @@ export const portfolio = [
     ],
   },
   {
-    id: 8,
+    id: 10,
     img: Work8,
+    category: "Design",
     title: "Website Design",
     details: [
       {
