@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "./navbar.css";
 import { links } from "../data";
+import Themes from "./Themes";
 
 function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -63,6 +64,7 @@ function Navbar() {
                 {name}
               </a>
             ))}
+            <Themes />
             {/* Desktop "Let's Talk" button */}
             <button
               type="button"

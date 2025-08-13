@@ -41,9 +41,9 @@ useEffect(()=>{
 
   return (
     <div className={`${showswitcher ? 'show-switcher' : ''} style_switcher`}>
-      <div className="style_switcher_toggler" onClick={()=> setShowSwitcher(!showswitcher)}>
+      {/* <div className="style_switcher_toggler" onClick={()=> setShowSwitcher(!showswitcher)}>
         <FaCog />
-      </div>
+      </div> */}
 
       <div className="theme_toggler" onClick={toggleTheme}>
         {theme === 'light-theme' ? <BsMoon /> : <BsSun />}
