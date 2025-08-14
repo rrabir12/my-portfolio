@@ -16,7 +16,7 @@
 }
 
 .style_switcher, .style_switcher_toggler, .theme_toggler{
-  border-radius: 5px;
+  border-radius: 0 5px 5px 0;
 }
 
 .style_switcher_items{
@@ -45,17 +45,16 @@
 
 .style_switcher_toggler, .theme_toggler{
   position: absolute;
-  left: 585%;
-  top: -43px;
-  background-color: #4d36a5;
-  height: 38px;
-  width: 38px;
+  left: 100%;
+  top: 10px;
+  background-color: var(--text-white);
+  height: 40px;
+  width: 40px;
   font-style: var(--large-font-size);
   cursor: pointer;
   display: grid;
   place-items: center;
-  color: #fff;
-  /* box-shadow: 0 0 2px hsl(0, 0%, 80%); */
+  box-shadow: 0 0 2px hsl(0, 0%, 80%);
   transition: all 0.3s ease;
 }
 

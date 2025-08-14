@@ -8,12 +8,12 @@ import { motion } from "framer-motion";
 
 function Home() {
   return (
-    <section className="home section grid" id="home">
+    <section className="home section min-!h-screen !mt-[70px] !px-6 md:!px-12 lg:!px-20 grid grid-cols-2 md:grid-cols-2 !items-center" id="home">
       {/* Profile Image Animation */}
       <motion.img
         src={profile}
         alt="Profile"
-        className="home_img"
+        className="!w-100 !h-100 object-cover !rounded-[30px] shadow-lg !mx-auto"
         initial={{ opacity: 0, x: -50, scale: 0.9 }}
         animate={{ opacity: 1, x: 0, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -21,7 +21,7 @@ function Home() {
 
       {/* Content Animation */}
       <motion.div
-        className="home_content"
+        className="!flex !flex-col !max-w-xl !mx-auto"
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
@@ -37,7 +37,7 @@ function Home() {
           </motion.h1>
 
           {/* Typewriter stays as is */}
-          <div className="type lg:!pl-16 font-[700]">
+          <div className="type lg:!pl-18 font-[700]">
             <Typewriter
               words={["Web Developer", "UI/UX Designer", "Freelancer"]}
               loop
