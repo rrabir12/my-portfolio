@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 function Home() {
   return (
-    <section className="home section min-!h-screen !mt-[70px] !px-6 md:!px-12 lg:!px-20 lg:flex !items-center" id="home">
+    <section className="home section container min-!h-screen !mt-[70px] !px-6 md:!px-12 lg:!px-20 lg:flex gap-20 !items-center" id="home">
       {/* Profile Image Animation */}
       <motion.img
         src={profile}
