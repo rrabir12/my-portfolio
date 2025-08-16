@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 function Home() {
   return (
-    <section className="home section min-!h-screen !mt-[70px] !px-6 md:!px-12 lg:!px-20 grid grid-cols-2 md:grid-cols-2 !items-center" id="home">
+    <section className="home section min-!h-screen !mt-[70px] !px-6 md:!px-12 lg:!px-20 lg:flex !items-center" id="home">
       {/* Profile Image Animation */}
       <motion.img
         src={profile}
@@ -83,7 +83,7 @@ function Home() {
         </div>
       </motion.div>
 
-      <div className="color_block"></div>
+      {/* <div className="color_block"></div> */}
     </section>
   );
 }
