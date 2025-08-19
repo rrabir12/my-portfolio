@@ -70,7 +70,7 @@ function About() {
         viewport={{ once: true, amount: 0.2 }}
         variants={staggerContainer}
       >
-        <motion.h3 className="section_subtitle subtitle_center" variants={fadeInUp}>
+         <motion.h3 className="section_subtitle subtitle_center" variants={fadeInUp}>
           My Skills
         </motion.h3>
         <motion.div className="skills_container grid" variants={fadeInUp}>

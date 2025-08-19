@@ -8,6 +8,7 @@ import Contact from "./pages/contact/contact";
 import Portfolio from "./pages/portfolio/portfolio";
 import Themes from "./components/Themes";
 import Footer from "./components/Footer";
+import ScrollToTopButton from "./components/Scrolltotop";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Portfolio />
       <Contact />
       <Footer />
+      <ScrollToTopButton />
       {/* <Routes>
         <Route index element={<Home />} />
         <Route path="About" element={<About />} />
