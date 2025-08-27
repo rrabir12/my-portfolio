@@ -19,6 +19,8 @@ import Work7 from "./assets/CryptoApp.png";
 import Work8 from "./assets/DirectoryWebHome.png";
 import Work9 from "./assets/talentlink.png"
 import Work10 from "./assets/recipePage.jpg"
+import Work11 from "./assets/digitalagency.png"
+
 
 import Theme1 from "./assets/purple.png";
 import Theme2 from "./assets/red.png";
@@ -450,7 +452,7 @@ export const portfolio = [
       {
         icon: <FiExternalLink />,
         title: "Preview : ",
-        desc: <a href="https://clickdigitals.com.np/" className="custom-link" target="_blank" rel="noopener noreferrer">View</a>,
+        desc: <a href="https://github.com/rrabir12/ClickDigital" className="custom-link" target="_blank" rel="noopener noreferrer">View</a>,
       },
     ],
   },
@@ -482,6 +484,31 @@ export const portfolio = [
 
   {
     id: 8,
+    img: Work11,
+    category: "Design",
+    title: "Landing Page Design",
+    details: [
+      {
+        title: "Project : ",
+        desc: "Digital Agency",
+      },
+      {
+        title: "Client : ",
+        desc: "Self project",
+      },
+      {
+        title: "Language : ",
+        desc: "Figma",
+      },
+      {
+        title: "Preview : ",
+        desc: <a href="https://www.figma.com/proto/yTHemsgxyxdS1KKoWLs5qQ/Untitled?node-id=31-24&t=1Yd2ke9axYqSyNrA-0&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1" className="custom-link" target="_blank" rel="noopener noreferrer">View</a>,
+      },
+    ],
+  },
+
+  {
+    id: 9,
     img: Work6,
     category: "Design",
     title: "Design",
@@ -509,7 +536,7 @@ export const portfolio = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     img: Work7,
     category: "Design",
     title: "Design",
@@ -537,7 +564,7 @@ export const portfolio = [
     ],
   },
   {
-    id: 10,
+    id: 11,
     img: Work8,
     category: "Design",
     title: "Website Design",

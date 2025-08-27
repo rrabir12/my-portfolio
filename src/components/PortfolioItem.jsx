@@ -39,7 +39,7 @@ function PortfolioItem({ img, title, details }) {
             })}
           </ul>
 
-          <img src={img} alt="" className="modal_img" />
+          <img src={img} alt="" className="modal_img !object-fill" />
         </div>
       </div>
       )}
