@@ -20,6 +20,7 @@ import Work8 from "./assets/DirectoryWebHome.png";
 import Work9 from "./assets/talentlink.png"
 import Work10 from "./assets/recipePage.jpg"
 import Work11 from "./assets/digitalagency.png"
+import Work12 from "./assets/furniture.png"
 
 
 import Theme1 from "./assets/purple.png";
@@ -453,6 +454,31 @@ export const portfolio = [
         icon: <FiExternalLink />,
         title: "Preview : ",
         desc: <a href="https://github.com/rrabir12/ClickDigital" className="custom-link" target="_blank" rel="noopener noreferrer">View</a>,
+      },
+    ],
+  },
+
+  {
+    id: 7,
+    img: Work12,
+    category: "Design",
+    title: "Ecommerce Website Design",
+    details: [
+      {
+        title: "Project : ",
+        desc: "Furniture Selling Website",
+      },
+      {
+        title: "Client : ",
+        desc: "Self project",
+      },
+      {
+        title: "Language : ",
+        desc: "Figma",
+      },
+      {
+        title: "Preview : ",
+        desc: <a href="https://www.figma.com/proto/KFcMZR3tazf3bYRgIsXJxZ/furniture-website?node-id=1-2&t=FgI2Np11Qbu6bzPq-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1" className="custom-link" target="_blank" rel="noopener noreferrer">View</a>,
       },
     ],
   },
