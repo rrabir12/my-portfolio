@@ -200,85 +200,120 @@ export const resume = [
 export const skills = [
   {
     id: 1,
+    category: "UI/UX",
     title: "Figma",
     percentage: "95",
   },
 
   {
     id: 1,
-    title: "Html",
+    title: "HTML5",
+    category: "Frontend",
     percentage: "95",
   },
 
   {
     id: 2,
-    title: "Javascript",
+    title: "Javascript(ES6)",
+    category: "Frontend",
     percentage: "85",
   },
 
   {
     id: 3,
-    title: "Css",
+    title: "CSS3",
+    category: "Frontend",
     percentage: "80",
   },
 
   {
     id: 4,
     title: "React.js",
+    category: "Frontend",
     percentage: "65",
   },
 
   {
     id: 5,
     title: "Tailwind",
+    category: "Frontend",
     percentage: "50",
   },
 
   {
     id: 6,
     title: "Express.js",
+    category: "Backend",
     percentage: "40",
   },
 
   {
     id: 6,
     title: "Node.js",
+    category: "Backend",
     percentage: "70",
   },
 
   {
     id: 7,
     title: "Php",
+    category: "Backend",
     percentage: "60",
   },
 
   {
     id: 8,
     title: "Wordpress",
+    category: "Tools",
     percentage: "75",
+  },
+
+  {
+    id: 8,
+    title: "Webpack",
+    category: "Tools",
+    percentage: "60",
+  },
+
+    {
+    id: 8,
+    title: "Babel",
+    category: "Tools",
+    percentage: "60",
+  },
+
+   {
+    id: 8,
+    title: "AI Tool",
+    category: "Tools",
+    percentage: "80",
   },
 
   {
     id: 9,
     title: "MongoDB",
+    category: "Database",
     percentage: "85",
   },
 
   {
     id: 9,
     title: "Mysql",
+    category: "Database",
     percentage: "75",
   },
 
   {
     id: 10,
     title: "Next js",
+    category: "All",
     percentage: "50",
   },
 
   {
     id: 11,
     title: "Nest js",
+    category: "Backend",
     percentage: "70",
   },
 ];
@@ -484,7 +519,7 @@ export const portfolio = [
   },
 
   {
-    id: 7,
+    id: 8,
     img: Work5,
     category: "Design",
     title: "Website Design",
@@ -509,7 +544,7 @@ export const portfolio = [
   },
 
   {
-    id: 8,
+    id: 9,
     img: Work11,
     category: "Design",
     title: "Landing Page Design",
@@ -534,7 +569,7 @@ export const portfolio = [
   },
 
   {
-    id: 9,
+    id: 10,
     img: Work6,
     category: "Design",
     title: "Design",
@@ -562,7 +597,7 @@ export const portfolio = [
     ],
   },
   {
-    id: 10,
+    id: 11,
     img: Work7,
     category: "Design",
     title: "Design",
@@ -590,7 +625,7 @@ export const portfolio = [
     ],
   },
   {
-    id: 11,
+    id: 12,
     img: Work8,
     category: "Design",
     title: "Website Design",

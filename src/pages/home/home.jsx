@@ -55,7 +55,7 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.8 }}
           >
-            I'm a Web developer & web designer focused on crafting clean &
+            I'm a Frontend Developer & UI/UX Designer focused on crafting clean &
             user-friendly experiences. I am passionate about building excellent
             software that improves the lives of those around me.
           </motion.p>

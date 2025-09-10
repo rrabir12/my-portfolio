@@ -53,7 +53,7 @@ function Portfolio() {
           <button
             key={cat}
             onClick={() => setActiveTab(cat)}
-            className={`relative !px-6 !py-2 rounded-full font-medium transition-all duration-300 transform 
+            className={`relative cursor-pointer !px-6 !py-2 rounded-full font-medium transition-all duration-300 transform 
         ${
           activeTab === cat
             ? "!bg-[#6856AE] text-white shadow-lg scale-105"
