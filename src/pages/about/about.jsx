@@ -63,20 +63,20 @@ function About() {
       <div className="seperator"></div>
 
       {/* Skills Section */}
-      {/* <motion.section
+       <motion.section
         className="skills"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
         variants={staggerContainer}
       >
-         <motion.h3 className="section_subtitle subtitle_center" variants={fadeInUp}>
+         {/* <motion.h3 className="section_subtitle subtitle_center" variants={fadeInUp}>
           My Skills
-        </motion.h3>
-        <motion.div className="skills_container grid" variants={fadeInUp}> */}
+        </motion.h3> */}
+        <motion.div className="" variants={fadeInUp}> 
           <Skills />
-        {/* </motion.div>
-      </motion.section> */}
+        </motion.div>
+      </motion.section> 
 
       <div className="seperator"></div>
 

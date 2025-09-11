@@ -3,6 +3,8 @@ import emailjs from "emailjs-com";
 import { FaEnvelopeOpen, FaPhoneSquareAlt, FaFacebookF, FaLinkedinIn, FaGithubAlt } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FiSend } from "react-icons/fi";
+import { FaBehance } from "react-icons/fa";
+import { FaDribbble } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import PhoneInput from "react-phone-input-2";
 import { motion } from "framer-motion";
@@ -88,17 +90,23 @@ function Contact() {
             </div>
 
             <div className="contact_socials">
-              <a href="https://www.facebook.com/profile.php?id=100067461679136" target="_blank" className="contact_social_link">
-                <FaFacebookF className="!mt-3 !ms-3" />
-              </a>
-              <a href="https://github.com/rrabir12" target="_blank" className="contact_social_link">
+               <a href="https://github.com/rrabir12" target="_blank" className="contact_social_link">
                 <FaGithubAlt className="!mt-3 !ms-3" />
               </a>
               <a href="www.linkedin.com/in/rabi-roy-821466272" target="_blank" className="contact_social_link">
                 <FaLinkedinIn className="!mt-3 !ms-3" />
               </a>
+              <a href="https://www.behance.net/kingroy9" target="_blank" className="contact_social_link">
+                <FaBehance className="!mt-3 !ms-3" />
+              </a>
+              <a href="https://dribbble.com/king-roy" target="_blank" className="contact_social_link">
+                <FaDribbble className="!mt-3 !ms-3" />
+              </a>
               <a href="https://www.instagram.com/i_rabiroy/" target="_blank" className="contact_social_link">
                 <FaInstagram className="!mt-3 !ms-3" />
+              </a>
+              <a href="https://www.facebook.com/profile.php?id=100067461679136" target="_blank" className="contact_social_link">
+                <FaFacebookF className="!mt-3 !ms-3" />
               </a>
             </div>
           </div>

@@ -136,7 +136,7 @@ export const personalInfo = [
 export const stats = [
   {
     id: 1,
-    no: "2+",
+    no: "4+",
     title: "Months of <br /> Intern Experience",
   },
 
@@ -165,7 +165,7 @@ export const resume = [
     category: "experience",
     icon: <FaBriefcase className="!mt-3 !ms-3"/>,
     year: "2024-2025",
-    title: "Frontend Developer Intern <span> Blue Fox pvt ltd </span>",
+    title: "Frontend Developer & UI/UX Intern <span> Blue Fox pvt ltd </span>",
     desc: "Worked on building responsive web interfaces using React, Bootstrap, and Tailwind. Improved UI performance and collaborated with designers to enhance the user experience.",
   },
 
@@ -174,7 +174,7 @@ export const resume = [
     category: "experience",
     icon: <FaBriefcase className="!mt-3 !ms-3"/>,
     year: "2024",
-    title: "UI/UX Designer Intern <span> IT Service Nepal </span>",
+    title: "Frontend Developer & UI/UX Intern <span> IT Service Nepal </span>",
     desc: "Designed and prototyped user interfaces in Figma, conducted user research, and optimized web and mobile experiences to enhance usability and engagement.",
   },
 
