@@ -12,21 +12,33 @@ import ScrollToTopButton from "./components/Scrolltotop";
 
 function App() {
   return (
-    <BrowserRouter >
-      <Navbar />
-      <Themes />
-      <Home />
-      <About />
-      <Portfolio />
-      <Contact />
-      <Footer />
-      <ScrollToTopButton />
-      {/* <Routes>
-        <Route index element={<Home />} />
-        <Route path="About" element={<About />} />
-        <Route path="Portfolio" element={<Portfolio />} />
-        <Route path="Contact" element={<Contact />} />
-      </Routes> */}
+    <BrowserRouter>
+      <div className="app_scene">
+        <div className="ambient_bg" aria-hidden="true">
+          <span className="ambient_orb orb_one" />
+          <span className="ambient_orb orb_two" />
+          <span className="ambient_orb orb_three" />
+          <span className="ambient_plane" />
+          <span className="ambient_noise" />
+        </div>
+
+        <div className="app_content">
+          <Navbar />
+          <Themes />
+          <Home />
+          <About />
+          <Portfolio />
+          <Contact />
+          <Footer />
+          <ScrollToTopButton />
+          {/* <Routes>
+            <Route index element={<Home />} />
+            <Route path="About" element={<About />} />
+            <Route path="Portfolio" element={<Portfolio />} />
+            <Route path="Contact" element={<Contact />} />
+          </Routes> */}
+        </div>
+      </div>
     </BrowserRouter>
   );
 }

@@ -26,20 +26,10 @@ function ScrollToTopButton() {
 
   return (
     visible && (
-     <button
-  onClick={scrollToTop}
-  className="scroll-to-top"
->
-  <div className="">
-  <FaArrowUp className="arrow !text-lg" />
-  </div>
-  <div className="gap-1 !pt-2">
-    <div>T</div>
-    <div>O</div>
-    <div>P</div>
-  </div>
-</button>
-
+      <button onClick={scrollToTop} className="scroll-to-top">
+        <FaArrowUp className="arrow" />
+        <span className="scroll_text">TOP</span>
+      </button>
     )
   );
 }

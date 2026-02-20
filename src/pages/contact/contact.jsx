@@ -8,6 +8,13 @@ import { FaDribbble } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import PhoneInput from "react-phone-input-2";
 import { motion } from "framer-motion";
+import {
+  smoothEase,
+  hoverEase,
+  sectionViewport,
+  staggerContainer,
+  fadeInUp,
+} from "../../utils/motion";
 import "react-toastify/dist/ReactToastify.css";
 import "react-phone-input-2/lib/style.css";
 import "./contact.css";
@@ -20,6 +27,34 @@ function Contact() {
     subject: "",
     message: "",
   });
+
+  const leftVariants = {
+    hidden: {
+      opacity: 0,
+      x: -16,
+      y: 16,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: { duration: 0.86, ease: smoothEase },
+    },
+  };
+
+  const rightVariants = {
+    hidden: {
+      opacity: 0,
+      x: 16,
+      y: 16,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: { duration: 0.88, ease: smoothEase },
+    },
+  };
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -35,25 +70,26 @@ function Contact() {
       .send("service_rwfnokc", "template_th4rcsg", formData, "52iljLFXnqCyso1I9")
       .then(
         () => {
-          toast.success("Message sent successfully!", { theme: "dark" });
+          toast.success("Message sent successfully!", { theme: "colored" });
           setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
         },
         () => {
-          toast.error("Failed to send message. Please try again.", { theme: "dark" });
+          toast.error("Failed to send message. Please try again.", { theme: "colored" });
         }
       );
   };
 
   return (
-    <section className="contact section" id="contact">
+    <motion.section
+      className="contact section"
+      id="contact"
+      initial="hidden"
+      whileInView="visible"
+      viewport={sectionViewport}
+      variants={staggerContainer}
+    >
       {/* Animated Section Title */}
-      <motion.h2
-        className="section_title"
-        initial={{ opacity: 0, y: -30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
+      <motion.h2 className="section_title" variants={fadeInUp}>
         Get In<span>Touch</span>
       </motion.h2>
 
@@ -61,15 +97,16 @@ function Contact() {
         {/* Left Info Section */}
         <motion.div
           className="contact_data"
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          viewport={{ once: true }}
+          variants={leftVariants}
+          whileHover={{
+            y: -2,
+            transition: { duration: 0.45, ease: hoverEase },
+          }}
         >
-          <h3 className="contact_title">Don't be Shy!</h3>
+          <h3 className="contact_title">Let's Build Something Great</h3>
           <p className="contact_description">
-            Feel free to get in touch with me. I am always open to discussing
-            new projects, creative ideas, or opportunities to be part of your vision.
+            I am open to new projects, product design work, and front-end roles.
+            If you want fast, polished UI with an AI-accelerated workflow, let's talk.
           </p>
 
           <div className="contact_info">
@@ -77,7 +114,9 @@ function Contact() {
               <FaEnvelopeOpen className="info_icon" />
               <div>
                 <span className="info_title">Mail me</span>
-                <h4 className="info_desc">rrabir9815@gmail.com</h4>
+                <a className="info_desc" href="mailto:rrabir9815@gmail.com">
+                  rrabir9815@gmail.com
+                </a>
               </div>
             </div>
 
@@ -85,28 +124,30 @@ function Contact() {
               <FaPhoneSquareAlt className="info_icon" />
               <div>
                 <span className="info_title">Call me</span>
-                <h4 className="info_desc">+977-9815811311</h4>
+                <a className="info_desc" href="tel:+9779815811311">
+                  +977-9815811311
+                </a>
               </div>
             </div>
 
             <div className="contact_socials">
-               <a href="https://github.com/rrabir12" target="_blank" className="contact_social_link">
-                <FaGithubAlt className="!mt-3 !ms-3" />
+              <a href="https://github.com/rrabir12" target="_blank" rel="noreferrer" className="contact_social_link">
+                <FaGithubAlt />
               </a>
-              <a href="www.linkedin.com/in/rabi-roy-821466272" target="_blank" className="contact_social_link">
-                <FaLinkedinIn className="!mt-3 !ms-3" />
+              <a href="https://www.linkedin.com/in/rabi-roy-821466272" target="_blank" rel="noreferrer" className="contact_social_link">
+                <FaLinkedinIn />
               </a>
-              <a href="https://www.behance.net/kingroy9" target="_blank" className="contact_social_link">
-                <FaBehance className="!mt-3 !ms-3" />
+              <a href="https://www.behance.net/kingroy9" target="_blank" rel="noreferrer" className="contact_social_link">
+                <FaBehance />
               </a>
-              <a href="https://dribbble.com/king-roy" target="_blank" className="contact_social_link">
-                <FaDribbble className="!mt-3 !ms-3" />
+              <a href="https://dribbble.com/king-roy" target="_blank" rel="noreferrer" className="contact_social_link">
+                <FaDribbble />
               </a>
-              <a href="https://www.instagram.com/i_rabiroy/" target="_blank" className="contact_social_link">
-                <FaInstagram className="!mt-3 !ms-3" />
+              <a href="https://www.instagram.com/i_rabiroy/" target="_blank" rel="noreferrer" className="contact_social_link">
+                <FaInstagram />
               </a>
-              <a href="https://www.facebook.com/profile.php?id=100067461679136" target="_blank" className="contact_social_link">
-                <FaFacebookF className="!mt-3 !ms-3" />
+              <a href="https://www.facebook.com/profile.php?id=100067461679136" target="_blank" rel="noreferrer" className="contact_social_link">
+                <FaFacebookF />
               </a>
             </div>
           </div>
@@ -116,10 +157,11 @@ function Contact() {
         <motion.form
           onSubmit={handleSubmit}
           className="contact_form"
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          viewport={{ once: true }}
+          variants={rightVariants}
+          whileHover={{
+            y: -2,
+            transition: { duration: 0.45, ease: hoverEase },
+          }}
         >
           <div className="form_input_group">
             <div className="form_input_div">
@@ -169,11 +211,11 @@ function Contact() {
                 inputClass="phone_input"
                 buttonClass="phone_button"
                 inputStyle={{
-                  height: "45px",
-                  width: "343px",
-                  borderRadius: "30px",
+                  height: "48px",
+                  width: "100%",
+                  borderRadius: "16px",
                   backgroundColor: "var(--container-color)",
-                  border: "none",
+                  border: "1px solid var(--border-color)",
                   color: "var(--title-color)",
                 }}
                 dropdownStyle={{ backgroundColor: "var(--container-color)" }}
@@ -202,14 +244,14 @@ function Contact() {
           >
             Send Message{" "}
             <span className="button_icon contact_button_icon">
-              <FiSend className="!mt-5 !ms-4" />
+              <FiSend />
             </span>
           </motion.button>
         </motion.form>
       </div>
 
       <ToastContainer position="top-right" autoClose={3000} />
-    </section>
+    </motion.section>
   );
 }
 

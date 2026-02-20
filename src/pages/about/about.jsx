@@ -8,17 +8,12 @@ import "./about.css";
 import { resume } from "../../data";
 import ResumeItem from "../../components/ResumeItem";
 import Skills from "../../components/Skills";
-
-// Animation Variants
-const fadeInUp = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-};
-
-const staggerContainer = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.2 } },
-};
+import {
+  hoverEase,
+  sectionViewport,
+  staggerContainer,
+  fadeInUp,
+} from "../../utils/motion";
 
 function About() {
   return (
@@ -28,15 +23,28 @@ function About() {
         className="about"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={sectionViewport}
         variants={staggerContainer}
       >
         <motion.h2 className="section_title" variants={fadeInUp}>
           About <span>Me</span>
         </motion.h2>
+        <motion.p className="section_intro" variants={fadeInUp}>
+          QA and Technical Support Engineer with hands-on experience in manual
+          and automation testing, API/performance testing, and issue
+          resolution. My frontend and UI/UX background helps me catch
+          usability and functional issues early.
+        </motion.p>
 
         <div className="about_container grid">
-          <motion.div className="about_info" variants={fadeInUp}>
+          <motion.div
+            className="about_info"
+            variants={fadeInUp}
+            whileHover={{
+              y: -2,
+              transition: { duration: 0.4, ease: hoverEase },
+            }}
+          >
             <h3 className="section_subtitle">Personal Infos</h3>
             <ul className="info_list grid">
               <Info />
@@ -49,12 +57,20 @@ function About() {
             >
               View CV{" "}
               <span className="button_icon">
-                <GrView className="!ms-4 !mt-5" />
+                <GrView />
               </span>
             </a>
           </motion.div>
 
-          <motion.div className="stats grid" variants={fadeInUp}>
+          <motion.div
+            className="stats grid"
+            variants={fadeInUp}
+            whileHover={{
+              y: -2,
+              transition: { duration: 0.4, ease: hoverEase },
+            }}
+          >
+            <h3 className="section_subtitle stats_heading">Professional Snapshot</h3>
             <Stats />
           </motion.div>
         </div>
@@ -63,17 +79,24 @@ function About() {
       <div className="seperator"></div>
 
       {/* Skills Section */}
-       <motion.section
+      <motion.section
         className="skills"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={sectionViewport}
         variants={staggerContainer}
       >
          {/* <motion.h3 className="section_subtitle subtitle_center" variants={fadeInUp}>
           My Skills
         </motion.h3> */}
-        <motion.div className="" variants={fadeInUp}> 
+        <motion.div
+          className=""
+          variants={fadeInUp}
+          whileHover={{
+            y: -2,
+            transition: { duration: 0.4, ease: hoverEase },
+          }}
+        >
           <Skills />
         </motion.div>
       </motion.section> 
@@ -85,21 +108,35 @@ function About() {
         className="resume"
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
+        viewport={sectionViewport}
         variants={staggerContainer}
       >
         <motion.h3 className="section_subtitle subtitle_center" variants={fadeInUp}>
           Experience & Education
         </motion.h3>
         <div className="resume_container grid">
-          <motion.div className="resume_data" variants={fadeInUp}>
+          <motion.div
+            className="resume_data"
+            variants={fadeInUp}
+            whileHover={{
+              y: -2,
+              transition: { duration: 0.4, ease: hoverEase },
+            }}
+          >
             {resume.map((val) =>
               val.category === "experience" ? (
                 <ResumeItem key={val.id} {...val} />
               ) : null
             )}
           </motion.div>
-          <motion.div className="resume_data" variants={fadeInUp}>
+          <motion.div
+            className="resume_data"
+            variants={fadeInUp}
+            whileHover={{
+              y: -2,
+              transition: { duration: 0.4, ease: hoverEase },
+            }}
+          >
             {resume.map((val) =>
               val.category === "education" ? (
                 <ResumeItem key={val.id} {...val} />

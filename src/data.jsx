@@ -58,7 +58,7 @@ export const links = [
 
   {
     id: 3,
-    name: "Project",
+    name: "Projects",
     icon: <FaFolderOpen className="nav__icon" />,
     path: "#portfolio",
   },
@@ -122,40 +122,40 @@ export const personalInfo = [
 
   {
     id: 9,
-    title: "Linkdin : ",
+    title: "LinkedIn : ",
     description: "rabi-roy-821466272",
   },
 
   {
     id: 10,
     title: "Languages : ",
-    description: "Maithali, Nepali, English, hindi",
+    description: "Maithali, Nepali, English, Hindi",
   },
 ];
 
 export const stats = [
   {
     id: 1,
-    no: "4+",
-    title: "Months of <br /> Intern Experience",
+    no: "2+",
+    title: "Experience <br /> Years",
   },
 
   {
     id: 2,
-    no: "5+",
-    title: "Completed <br /> Self Projects",
+    no: "3",
+    title: "Companies <br /> Worked With",
   },
 
   {
     id: 3,
-    no: "3+",
-    title: "Technologies <br /> Experienced",
+    no: "10+",
+    title: "Technologies <br /> Experience",
   },
 
   {
     id: 4,
-    no: "100+",
-    title: " Hours of <br />coding Practice",
+    no: "12+",
+    title: "Completed <br /> Projects",
   },
 ];
 
@@ -163,158 +163,206 @@ export const resume = [
   {
     id: 1,
     category: "experience",
-    icon: <FaBriefcase className="!mt-3 !ms-3"/>,
+    icon: <FaBriefcase />,
+    year: "Dec 2025 - Present",
+    title: "QA and Technical Support Engineer <span> Slash Plus, Nepal </span>",
+    desc: [
+      "Performed manual and automation testing to ensure software quality and stability.",
+      "Created and executed test cases, reported bugs, and verified fixes.",
+      "Performed API validation and performance checks using Postman and JMeter, and automated critical workflows with Playwright.",
+      "Handled customer-reported issues, provided technical support, and collaborated with developers and product teams to improve user experience.",
+    ],
+  },
+
+  {
+    id: 2,
+    category: "experience",
+    icon: <FaBriefcase />,
+    year: "Internship",
+    title: "QA and Technical Support Intern <span> Slash Plus </span>",
+    desc: [
+      "Assisted in functional, regression, and smoke testing.",
+      "Documented bugs with clear reproduction steps and retested fixes.",
+      "Configured routers and cameras, and troubleshot hardware and software issues.",
+    ],
+  },
+
+  {
+    id: 3,
+    category: "experience",
+    icon: <FaBriefcase />,
     year: "2024-2025",
     title: "Frontend Developer & UI/UX Intern <span> Blue Fox pvt ltd </span>",
     desc: "Worked on building responsive web interfaces using React, Bootstrap, and Tailwind. Improved UI performance and collaborated with designers to enhance the user experience.",
   },
 
   {
-    id: 2,
+    id: 4,
     category: "experience",
-    icon: <FaBriefcase className="!mt-3 !ms-3"/>,
+    icon: <FaBriefcase />,
     year: "2024",
     title: "Frontend Developer & UI/UX Intern <span> IT Service Nepal </span>",
     desc: "Designed and prototyped user interfaces in Figma, conducted user research, and optimized web and mobile experiences to enhance usability and engagement.",
   },
 
   {
-    id: 3,
+    id: 5,
     category: "education",
-    icon: <FaGraduationCap className="!mt-2 !ms-3 text-xl"/>,
+    icon: <FaGraduationCap />,
     year: "2025",
-    title: "Bachelor Degree <span> Purbanchal University </span>",
-    desc: "Pursuing a Bachelor's degree with a focus on IT. Gained in-depth knowledge of Programming, hands-on experience in Projects, and skills in HTML, CSS, JS, React, Tailwind, PHP, Mysql.",
+    title: "Bachelor in Information Technology <span> PUSAT College </span>",
+    desc: [
+      "Affiliated with Purbanchal University.",
+      "Strong foundation in software development, testing, and UI/UX design.",
+    ],
   },
 
   {
-    id: 4,
+    id: 6,
     category: "education",
-    icon: <FaGraduationCap className="!mt-2 !ms-3 text-xl"/>,
+    icon: <FaGraduationCap />,
     year: "2020",
     title: "Plus 2 Degree <span> Triton College, Kathmandu </span>",
     desc: "Completed high school with a specialization in Science. Developed a strong foundation in Computer.",
   },
+
 ];
 
 export const skills = [
   {
     id: 1,
-    category: "UI/UX",
-    title: "Figma",
-    percentage: "95",
+    category: "Testing & QA",
+    title: "Manual Testing",
   },
-
-  {
-    id: 1,
-    title: "HTML5",
-    category: "Frontend",
-    percentage: "95",
-  },
-
   {
     id: 2,
-    title: "Javascript(ES6)",
-    category: "Frontend",
-    percentage: "85",
+    category: "Testing & QA",
+    title: "Unit Testing",
   },
-
   {
     id: 3,
-    title: "CSS3",
-    category: "Frontend",
-    percentage: "80",
+    category: "Testing & QA",
+    title: "Integration Testing",
   },
-
   {
     id: 4,
-    title: "React.js",
-    category: "Frontend",
-    percentage: "65",
+    category: "Testing & QA",
+    title: "Playwright",
   },
-
   {
     id: 5,
-    title: "Tailwind",
-    category: "Frontend",
-    percentage: "50",
+    category: "Testing & QA",
+    title: "Postman",
   },
-
   {
     id: 6,
-    title: "Express.js",
-    category: "Backend",
-    percentage: "40",
+    category: "Testing & QA",
+    title: "JMeter",
   },
-
-  {
-    id: 6,
-    title: "Node.js",
-    category: "Backend",
-    percentage: "70",
-  },
-
   {
     id: 7,
-    title: "Php",
-    category: "Backend",
-    percentage: "60",
+    category: "Frontend Development",
+    title: "JavaScript (ES6+)",
   },
-
   {
     id: 8,
-    title: "Wordpress",
-    category: "Tools",
-    percentage: "75",
+    category: "Frontend Development",
+    title: "React.js",
   },
-
-  {
-    id: 8,
-    title: "Webpack",
-    category: "Tools",
-    percentage: "60",
-  },
-
-    {
-    id: 8,
-    title: "Babel",
-    category: "Tools",
-    percentage: "60",
-  },
-
-   {
-    id: 8,
-    title: "AI Tool",
-    category: "Tools",
-    percentage: "80",
-  },
-
   {
     id: 9,
-    title: "MongoDB",
-    category: "Database",
-    percentage: "85",
+    category: "Frontend Development",
+    title: "Hooks",
   },
-
-  {
-    id: 9,
-    title: "Mysql",
-    category: "Database",
-    percentage: "75",
-  },
-
   {
     id: 10,
-    title: "Next js",
-    category: "All",
-    percentage: "50",
+    category: "Frontend Development",
+    title: "Tailwind CSS",
   },
-
   {
     id: 11,
-    title: "Nest js",
-    category: "Backend",
-    percentage: "70",
+    category: "Frontend Development",
+    title: "Bootstrap",
+  },
+  {
+    id: 12,
+    category: "Frontend Development",
+    title: "HTML5",
+  },
+  {
+    id: 13,
+    category: "Frontend Development",
+    title: "CSS3",
+  },
+  {
+    id: 14,
+    category: "Design & UX",
+    title: "Figma",
+  },
+  {
+    id: 15,
+    category: "Design & UX",
+    title: "Responsive Design",
+  },
+  {
+    id: 16,
+    category: "Design & UX",
+    title: "Usability Testing",
+  },
+  {
+    id: 17,
+    category: "Backend & Databases",
+    title: "PHP",
+  },
+  {
+    id: 18,
+    category: "Backend & Databases",
+    title: "Firebase",
+  },
+  {
+    id: 19,
+    category: "Backend & Databases",
+    title: "MySQL",
+  },
+  {
+    id: 20,
+    category: "Soft Skills",
+    title: "User Research",
+  },
+  {
+    id: 21,
+    category: "Soft Skills",
+    title: "Critical Thinking",
+  },
+  {
+    id: 22,
+    category: "Soft Skills",
+    title: "Problem-Solving",
+  },
+  {
+    id: 23,
+    category: "Soft Skills",
+    title: "Adaptability",
+  },
+  {
+    id: 24,
+    category: "Soft Skills",
+    title: "Team Collaboration",
+  },
+  {
+    id: 25,
+    category: "Soft Skills",
+    title: "Project Management",
+  },
+  {
+    id: 26,
+    category: "Soft Skills",
+    title: "Time Management",
+  },
+  {
+    id: 27,
+    category: "Soft Skills",
+    title: "Communication & Presentation",
   },
 ];
 
@@ -323,7 +371,7 @@ export const portfolio = [
     id: 1,
     img: Work9,
     category: "Website",
-    title: "FullStack Website",
+    title: "Full-stack Website",
     details: [
       {
         icon: <FiFileText />,
@@ -338,7 +386,7 @@ export const portfolio = [
       {
         icon: <FaCode />,
         title: "Language : ",
-        desc: "React js, Tailwind, Firebase",
+        desc: "React.js, Tailwind CSS, Firebase",
       },
       {
         icon: <FiExternalLink />,
@@ -352,7 +400,7 @@ export const portfolio = [
     id: 2,
     img: Work10,
     category: "Mobile",
-    title: "FullStack Mobile App",
+    title: "Full-stack Mobile App",
     details: [
       {
         icon: <FiFileText />,
@@ -367,7 +415,7 @@ export const portfolio = [
       {
         icon: <FaCode />,
         title: "Language : ",
-        desc: "React Native, Nativewind, neon, drizzle, clerk",
+        desc: "React Native, NativeWind, Neon, Drizzle, Clerk",
       },
       {
         icon: <FiExternalLink />,
@@ -396,7 +444,7 @@ export const portfolio = [
       {
         icon: <FaCode />,
         title: "Language : ",
-        desc: "html, css, js, bootstrap",
+        desc: "HTML, CSS, JS, Bootstrap",
       },
       {
         icon: <FiExternalLink />,
@@ -415,7 +463,7 @@ export const portfolio = [
       {
         icon: <FiFileText />,
         title: "Project : ",
-        desc: "RealeState Website",
+        desc: "Real Estate Website",
       },
       {
         icon: <FiUser />,
@@ -425,7 +473,7 @@ export const portfolio = [
       {
         icon: <FaCode />,
         title: "Language : ",
-        desc: "React JS",
+        desc: "React.js",
       },
       {
         icon: <FiExternalLink />,
@@ -439,7 +487,7 @@ export const portfolio = [
     id: 5,
     img: Work3,
     category: "Website",
-    title: "FullStack Website",
+    title: "Full-stack Website",
     details: [
       {
         icon: <FiFileText />,
@@ -454,7 +502,7 @@ export const portfolio = [
       {
         icon: <FaCode />,
         title: "Language : ",
-        desc: "html, css, bootstrap, php, mysql",
+        desc: "HTML, CSS, Bootstrap, PHP, MySQL",
       },
       {
         icon: <FiExternalLink />,
@@ -483,7 +531,7 @@ export const portfolio = [
       {
         icon: <FaCode />,
         title: "Language : ",
-        desc: "React js, tailwind",
+        desc: "React.js, Tailwind CSS",
       },
       {
         icon: <FiExternalLink />,
@@ -605,7 +653,7 @@ export const portfolio = [
       {
         icon: <FiFileText />,
         title: "Project : ",
-        desc: "Cripto App",
+        desc: "Crypto App",
       },
       {
         icon: <FiUser />,

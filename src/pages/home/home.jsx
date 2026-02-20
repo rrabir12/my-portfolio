@@ -1,45 +1,56 @@
 import React from "react";
 import profile from "../../assets/mypic.png";
-import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import "./home.css";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
+import { smoothEase, sectionViewport, staggerContainer } from "../../utils/motion";
 
 function Home() {
+  const contentVariants = {
+    hidden: { opacity: 0, y: 24 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.92, ease: smoothEase },
+    },
+  };
+
+  const mediaVariants = {
+    hidden: { opacity: 0, y: 28, scale: 0.985 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.98, ease: smoothEase, delay: 0.12 },
+    },
+  };
+
   return (
-    <section className="home section container min-!h-screen !mt-[70px] !px-6 md:!px-12 lg:!px-20 lg:flex gap-20 !items-center" id="home">
-      {/* Profile Image Animation */}
-      <motion.img
-        src={profile}
-        alt="Profile"
-        className="!w-100 !h-100 object-cover !rounded-[30px] shadow-lg !mx-auto"
-        initial={{ opacity: 0, x: -50, scale: 0.9 }}
-        animate={{ opacity: 1, x: 0, scale: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      />
+    <motion.section
+      className="home section"
+      id="home"
+      initial="hidden"
+      whileInView="visible"
+      viewport={sectionViewport}
+      variants={staggerContainer}
+    >
+      <div className="container home_container">
+        <motion.div className="home_content" variants={contentVariants}>
+          <span className="badge">Open to QA Opportunities</span>
 
-      {/* Content Animation */}
-      <motion.div
-        className="!flex !flex-col !max-w-xl !mx-auto"
-        initial={{ opacity: 0, x: 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0.3 }}
-      >
-        <div className="home_data">
-          <motion.h1
-            className="home_title"
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
-          >
-            <span className="whitespace-nowrap">Hi, I'm Rabi Roy.</span>
-          </motion.h1>
+          <h1 className="home_title">Rabi Roy</h1>
+          <p className="home_subtitle">
+            Software Quality Assurance & Technical Support Engineer
+          </p>
 
-          {/* Typewriter stays as is */}
-          <div className="type lg:!pl-18 font-[700]">
+          <div className="home_roles">
             <Typewriter
-              words={["Web Developer", "UI/UX Designer", "Freelancer"]}
+              words={[
+                "Manual & Automation Testing",
+                "API & Performance Testing",
+                "Customer Issue Resolution",
+              ]}
               loop
               cursor
               cursorStyle="|"
@@ -48,43 +59,36 @@ function Home() {
             />
           </div>
 
-          {/* Paragraph animation */}
-          <motion.p
-            className="home_description"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.8 }}
-          >
-            I'm a Frontend Developer & UI/UX Designer focused on crafting clean &
-            user-friendly experiences. I am passionate about building excellent
-            software that improves the lives of those around me.
-          </motion.p>
+          <p className="home_description">
+            Software Quality Assurance & Technical Support Engineer with
+            hands-on experience in manual and automation testing, test case
+            creation, API and performance testing, and customer issue
+            resolution. Driven by continuous learning and building reliable,
+            user-centered software products.
+          </p>
 
-          {/* Button animation */}
-          <motion.a
-            href="#about"
-            className="button inline-flex items-center gap-2"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{
-              duration: 0.5,
-              delay: 1.1,
-              type: "spring",
-              stiffness: 120,
-            }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            More About Me
-            <span className="button_icon">
-              <FaArrowRight className="!mt-5 !ms-4" />
-            </span>
-          </motion.a>
-        </div>
-      </motion.div>
+          <div className="home_actions">
+            <a href="#portfolio" className="button">
+              View Projects
+              <span className="button_icon">
+                <FaArrowRight />
+              </span>
+            </a>
+            <a href="#contact" className="button button_outline">
+              Let's Talk
+            </a>
+          </div>
 
-      {/* <div className="color_block"></div> */}
-    </section>
+        </motion.div>
+
+        <motion.div className="home_media" variants={mediaVariants}>
+          <div className="home_photo_wrap">
+            <img src={profile} alt="Rabi Roy portrait" className="home_img" />
+            <span className="home_photo_ring" />
+          </div>
+        </motion.div>
+      </div>
+    </motion.section>
   );
 }
 

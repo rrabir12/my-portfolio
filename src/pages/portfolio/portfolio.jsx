@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { portfolio } from "../../data";
 import PortfolioItem from "../../components/PortfolioItem";
 import { motion, AnimatePresence } from "framer-motion";
+import { smoothEase, smoothExit, hoverEase, sectionViewport, fadeInUp } from "../../utils/motion";
 import "./portfolio.css";
 
 function Portfolio() {
@@ -18,47 +19,47 @@ function Portfolio() {
 
   // Animation Variants
   const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2 },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 16 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      transition: { duration: 0.55, ease: smoothEase, staggerChildren: 0.1, delayChildren: 0.06 },
     },
   };
 
   return (
-    <section className="portfolio section" id="portfolio">
+    <motion.section
+      className="portfolio section"
+      id="portfolio"
+      initial="hidden"
+      whileInView="visible"
+      viewport={sectionViewport}
+    >
       {/* Section Title */}
       <motion.h2
         className="section_title"
-        initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
+        variants={fadeInUp}
       >
-        My <span>Project</span>
+        Selected <span>Projects</span>
       </motion.h2>
 
+      <motion.p
+        className="section_intro"
+        variants={fadeInUp}
+      >
+        A curated mix of web apps, UI/UX design, and client work showcasing clean
+        interfaces, strong UX, and modern development practices.
+      </motion.p>
+
       {/* Tabs */}
-      <div className="flex justify-center !gap-3 !mb-10">
+      <div className="portfolio_filters">
         {categories.map((cat) => (
           <button
             key={cat}
             onClick={() => setActiveTab(cat)}
-            className={`relative cursor-pointer !px-6 !py-2 rounded-full font-medium transition-all duration-300 transform 
-        ${
-          activeTab === cat
-            ? "!bg-[#6856AE] text-white shadow-lg scale-105"
-            : "bg-white text-[#666666] hover:text-[#6856AE] hover:shadow-md font-semibold"
-        }`}
+            className={`portfolio_filter ${
+              activeTab === cat ? "is-active" : ""
+            }`}
           >
             {cat}
           </button>
@@ -71,30 +72,55 @@ function Portfolio() {
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.001 }} // triggers when 20% of the section is visible
+        viewport={sectionViewport}
       >
-        <AnimatePresence>
+        <AnimatePresence mode="popLayout" initial={false}>
           {filteredPortfolio.map((item, index) => {
             // Alternate slide direction
             const directionVariant = {
-              hidden: { opacity: 0, x: index % 2 === 0 ? -50 : 50, y: 50 },
-              visible: {
+              hidden: {
+                opacity: 0,
+                x: index % 2 === 0 ? -16 : 16,
+                y: 20,
+                scale: 0.985,
+              },
+              visible: ({ index: itemIndex }) => ({
                 opacity: 1,
                 x: 0,
                 y: 0,
-                transition: { duration: 0.6, ease: "easeOut" },
-              },
-              exit: { opacity: 0, y: 30 },
+                scale: 1,
+                transition: {
+                  duration: 0.72,
+                  ease: smoothEase,
+                  delay: itemIndex * 0.07,
+                },
+              }),
+              exit: ({ index: itemIndex, total }) => ({
+                opacity: 0,
+                y: 10,
+                scale: 0.99,
+                transition: {
+                  duration: 0.3,
+                  ease: smoothExit,
+                  delay: (total - itemIndex - 1) * 0.03,
+                },
+              }),
             };
 
             return (
               <motion.div
-                key={item.id}
+                key={`${activeTab}-${item.id}`}
                 variants={directionVariant}
+                custom={{ index, total: filteredPortfolio.length }}
                 initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
+                animate="visible"
+                exit="exit"
+                whileHover={{
+                  y: -4,
+                  transition: { duration: 0.42, ease: hoverEase },
+                }}
                 layout
+                transition={{ layout: { duration: 0.6, ease: smoothEase } }}
               >
                 <PortfolioItem {...item} />
               </motion.div>
@@ -102,7 +128,7 @@ function Portfolio() {
           })}
         </AnimatePresence>
       </motion.div>
-    </section>
+    </motion.section>
   );
 }
 
