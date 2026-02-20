@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./navbar.css";
 import { links } from "../data";
+import Themes from "./Themes";
 
 function Navbar() {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -100,18 +101,22 @@ function Navbar() {
             </a>
           </div>
 
-          <button
-            className={`nav_toggle ${isMobileMenuOpen ? "is-open" : ""}`}
-            onClick={() => setMobileMenuOpen((prev) => !prev)}
-            aria-label="Open navigation"
-            aria-expanded={isMobileMenuOpen}
-            aria-controls="mobile-navigation"
-            type="button"
-          >
-            <span />
-            <span />
-            <span />
-          </button>
+          <div className="nav_actions">
+            <Themes className="nav_theme_toggler" />
+
+            <button
+              className={`nav_toggle ${isMobileMenuOpen ? "is-open" : ""}`}
+              onClick={() => setMobileMenuOpen((prev) => !prev)}
+              aria-label="Open navigation"
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-navigation"
+              type="button"
+            >
+              <span />
+              <span />
+              <span />
+            </button>
+          </div>
         </div>
       </nav>
 

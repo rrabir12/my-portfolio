@@ -79,27 +79,9 @@ function About() {
       <div className="seperator"></div>
 
       {/* Skills Section */}
-      <motion.section
-        className="skills"
-        initial="hidden"
-        whileInView="visible"
-        viewport={sectionViewport}
-        variants={staggerContainer}
-      >
-         {/* <motion.h3 className="section_subtitle subtitle_center" variants={fadeInUp}>
-          My Skills
-        </motion.h3> */}
-        <motion.div
-          className=""
-          variants={fadeInUp}
-          whileHover={{
-            y: -2,
-            transition: { duration: 0.4, ease: hoverEase },
-          }}
-        >
-          <Skills />
-        </motion.div>
-      </motion.section> 
+      <section className="skills">
+        <Skills />
+      </section>
 
       <div className="seperator"></div>
 

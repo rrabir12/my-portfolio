@@ -169,27 +169,6 @@ html {
     grid-template-columns: 1fr !important;
   }
 
-  .theme_img {
-    width: 25px !important;
-  }
-
-  .style_switcher_toggler,
-  .theme_toggler {
-    width: 40px !important;
-    height: 40px !important;
-  }
-
-  .style_switcher_toggler {
-    top: 15% !important;
-  }
-
-  .theme_toggler {
-    bottom: 15% !important;
-  }
-
-  .style_switcher_close {
-    top: 5% !important;
-  }
 }
 
 @media screen and (max-width: 480px) {

@@ -116,9 +116,8 @@ function Skills() {
       <motion.h2
         className="section_subtitle subtitle_center"
         initial={{ opacity: 0, y: -20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.85, ease: smoothEase }}
-        viewport={sectionViewport}
       >
         My Skills
       </motion.h2>
@@ -144,8 +143,7 @@ function Skills() {
         className="skills_container container grid"
         variants={containerVariants}
         initial="hidden"
-        whileInView="visible"
-        viewport={sectionViewport}
+        animate="visible"
       >
         <AnimatePresence mode="popLayout" initial={false}>
           {filteredSkills.map(({ title }, index) => {
