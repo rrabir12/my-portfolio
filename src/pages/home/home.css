@@ -89,17 +89,7 @@
 }
 
 .home_photo_wrap::before {
-  content: "";
-  position: absolute;
-  inset: -20px;
-  border-radius: 32px;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 138, 76, 0.25),
-    rgba(72, 162, 255, 0.25)
-  );
-  filter: blur(10px);
-  z-index: 0;
+  display: none;
 }
 
 .home_img {
@@ -116,7 +106,7 @@
   position: absolute;
   inset: -12px;
   border-radius: 32px;
-  border: 2px solid rgba(255, 138, 76, 0.25);
+  border: 2px solid var(--border-color);
   z-index: 0;
 }
 

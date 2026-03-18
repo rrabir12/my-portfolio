@@ -23,14 +23,6 @@ function App() {
   return (
     <BrowserRouter>
       <div className="app_scene">
-        <div className="ambient_bg" aria-hidden="true">
-          <span className="ambient_orb orb_one" />
-          <span className="ambient_orb orb_two" />
-          <span className="ambient_orb orb_three" />
-          <span className="ambient_plane" />
-          <span className="ambient_noise" />
-        </div>
-
         <div className="app_content">
           <Navbar />
           <Home />

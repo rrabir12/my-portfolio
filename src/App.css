@@ -4,18 +4,18 @@
 /* css variables */
 :root {
   /* colors */
-  --first-color: hsl(16, 85%, 55%);
-  --accent-2: hsl(201, 84%, 45%);
-  --title-color: hsl(222, 24%, 18%);
-  --text-color: hsl(220, 12%, 38%);
-  --body-color: hsl(36, 33%, 97%);
-  --container-color: hsl(0, 0%, 100%);
-  --border-color: hsl(220, 14%, 86%);
-  --text-white: #fff;
+  --first-color: #2563eb;
+  --accent-2: #1d4ed8;
+  --title-color: #0f172a;
+  --text-color: #475569;
+  --body-color: #f8fafc;
+  --container-color: #ffffff;
+  --border-color: #d5dde6;
+  --text-white: #ffffff;
 
-  --shadow-sm: 0 8px 24px rgba(15, 23, 42, 0.08);
-  --shadow-md: 0 18px 45px rgba(15, 23, 42, 0.12);
-  --shadow-lg: 0 28px 70px rgba(15, 23, 42, 0.16);
+  --shadow-sm: none;
+  --shadow-md: none;
+  --shadow-lg: none;
 
   /* font and typography */
   --body-font: "Manrope", sans-serif;
@@ -40,11 +40,11 @@
 }
 
 .dark-theme {
-  --title-color: hsl(0, 0%, 95%);
-  --text-color: hsl(0, 0%, 75%);
-  --body-color: hsl(222, 22%, 10%);
-  --container-color: hsl(222, 18%, 14%);
-  --border-color: hsl(220, 14%, 22%);
+  --title-color: #f8fafc;
+  --text-color: #cbd5e1;
+  --body-color: #0f172a;
+  --container-color: #162233;
+  --border-color: #2a384c;
 }
 
 /* Responsive typography */
@@ -89,111 +89,18 @@ textarea {
 }
 
 .ambient_bg {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-  perspective: 1400px;
-}
-
-.ambient_orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(2px);
-  opacity: 0.22;
-  transform-origin: center;
-}
-
-.orb_one {
-  width: clamp(260px, 36vw, 520px);
-  height: clamp(260px, 36vw, 520px);
-  left: -8%;
-  top: 10%;
-  background: radial-gradient(
-    circle at 35% 35%,
-    rgba(255, 138, 76, 0.58),
-    rgba(255, 138, 76, 0.06) 68%
-  );
-  animation: orbFloatOne 16s ease-in-out infinite alternate;
-}
-
-.orb_two {
-  width: clamp(220px, 30vw, 430px);
-  height: clamp(220px, 30vw, 430px);
-  right: -6%;
-  top: 18%;
-  background: radial-gradient(
-    circle at 40% 40%,
-    rgba(72, 162, 255, 0.5),
-    rgba(72, 162, 255, 0.07) 70%
-  );
-  animation: orbFloatTwo 18s ease-in-out infinite alternate;
-}
-
-.orb_three {
-  width: clamp(200px, 28vw, 400px);
-  height: clamp(200px, 28vw, 400px);
-  left: 30%;
-  bottom: -14%;
-  background: radial-gradient(
-    circle at 50% 30%,
-    rgba(255, 182, 120, 0.42),
-    rgba(255, 182, 120, 0.05) 72%
-  );
-  animation: orbFloatThree 20s ease-in-out infinite alternate;
-}
-
-.ambient_plane {
-  position: absolute;
-  inset: 10% -25% -45%;
-  background-image:
-    linear-gradient(rgba(72, 162, 255, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 138, 76, 0.12) 1px, transparent 1px);
-  background-size: 80px 80px;
-  opacity: 0.2;
-  transform: perspective(1400px) rotateX(68deg) translateY(34%);
-  transform-origin: center;
-  animation: planeSweep 24s linear infinite;
-}
-
-.ambient_noise {
-  position: absolute;
-  inset: -20%;
-  background-image:
-    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.07), transparent 35%),
-    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.05), transparent 32%);
-  opacity: 0.45;
-  mix-blend-mode: soft-light;
-  animation: noiseShift 7s steps(8, end) infinite;
+  display: none;
 }
 
 body {
-  background:
-    radial-gradient(circle at 10% 0%, rgba(255, 200, 150, 0.2), transparent 40%),
-    radial-gradient(circle at 90% 10%, rgba(90, 180, 255, 0.18), transparent 42%),
-    var(--body-color);
+  background: var(--body-color);
   color: var(--text-color);
   line-height: 1.7;
   overflow-x: hidden;
 }
 
 .dark-theme body {
-  background:
-    radial-gradient(circle at 10% 0%, rgba(255, 138, 76, 0.12), transparent 42%),
-    radial-gradient(circle at 90% 10%, rgba(72, 162, 255, 0.12), transparent 44%),
-    var(--body-color);
-}
-
-.dark-theme .ambient_orb {
-  opacity: 0.2;
-}
-
-.dark-theme .ambient_plane {
-  opacity: 0.16;
-  background-image:
-    linear-gradient(rgba(72, 162, 255, 0.16) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 138, 76, 0.14) 1px, transparent 1px);
+  background: var(--body-color);
 }
 
 h1,
@@ -206,7 +113,8 @@ h4 {
 }
 
 ::selection {
-  background: rgba(255, 138, 76, 0.35);
+  background: var(--first-color);
+  color: var(--text-white);
 }
 
 ul {
@@ -274,17 +182,16 @@ img {
   gap: 8px;
   padding: 6px 14px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.8);
+  background: var(--container-color);
   border: 1px solid var(--border-color);
   font-size: var(--tiny-font-size);
   font-weight: var(--weight-600);
   color: var(--title-color);
   box-shadow: var(--shadow-sm);
-  backdrop-filter: blur(8px);
 }
 
 .dark-theme .badge {
-  background: rgba(15, 23, 42, 0.7);
+  background: var(--container-color);
 }
 
 .card {
@@ -307,7 +214,8 @@ img {
   font-weight: var(--weight-600);
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, var(--first-color), var(--accent-2));
+  background: var(--first-color);
+  border-color: var(--first-color);
   box-shadow: var(--shadow-sm);
   cursor: pointer;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -315,6 +223,7 @@ img {
 
 .button:hover {
   transform: translateY(-2px);
+  background: var(--accent-2);
   box-shadow: var(--shadow-md);
 }
 
@@ -331,7 +240,7 @@ img {
 }
 
 .button_icon {
-  background: rgba(255, 255, 255, 0.25);
+  background: var(--accent-2);
   position: absolute;
   right: 6px;
   top: 50%;
@@ -366,10 +275,9 @@ img {
   align-items: center;
   padding: 24px 26px;
   border-radius: 20px;
-  background:
-    linear-gradient(135deg, rgba(255, 138, 76, 0.12), rgba(72, 162, 255, 0.12)),
-    var(--container-color);
+  background: var(--container-color);
   border: 1px solid var(--border-color);
+  border-top: 3px solid var(--first-color);
   box-shadow: var(--shadow-sm);
 }
 
@@ -447,51 +355,6 @@ img {
   transform: translateY(-1px);
 }
 
-@keyframes orbFloatOne {
-  from {
-    transform: translate3d(0, 0, 0) scale(1) rotate(-5deg);
-  }
-  to {
-    transform: translate3d(6%, -8%, 0) scale(1.08) rotate(6deg);
-  }
-}
-
-@keyframes orbFloatTwo {
-  from {
-    transform: translate3d(0, 0, 0) scale(1) rotate(8deg);
-  }
-  to {
-    transform: translate3d(-7%, 7%, 0) scale(1.06) rotate(-6deg);
-  }
-}
-
-@keyframes orbFloatThree {
-  from {
-    transform: translate3d(0, 0, 0) scale(1) rotate(-4deg);
-  }
-  to {
-    transform: translate3d(-6%, -6%, 0) scale(1.05) rotate(7deg);
-  }
-}
-
-@keyframes planeSweep {
-  from {
-    transform: perspective(1400px) rotateX(68deg) translateY(34%) translateX(0);
-  }
-  to {
-    transform: perspective(1400px) rotateX(68deg) translateY(34%) translateX(-80px);
-  }
-}
-
-@keyframes noiseShift {
-  from {
-    transform: translate3d(0, 0, 0);
-  }
-  to {
-    transform: translate3d(-3%, -2%, 0);
-  }
-}
-
 @media screen and (max-width: 900px) {
   .footer_panel {
     grid-template-columns: 1fr;
@@ -505,15 +368,6 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-  .ambient_plane {
-    inset: 18% -40% -55%;
-    opacity: 0.12;
-  }
-
-  .ambient_noise {
-    opacity: 0.28;
-  }
-
   .site_footer {
     margin-top: 24px;
     padding: 20px 0 26px;
@@ -527,23 +381,5 @@ img {
   .footer_bottom {
     flex-direction: column;
     text-align: center;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .ambient_orb {
-    opacity: 0.14;
-  }
-
-  .ambient_plane {
-    display: none;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .ambient_orb,
-  .ambient_plane,
-  .ambient_noise {
-    animation: none !important;
   }
 }

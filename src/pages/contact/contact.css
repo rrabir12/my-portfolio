@@ -75,7 +75,7 @@
 }
 
 .contact_social_link:hover {
-  background: linear-gradient(135deg, var(--first-color), var(--accent-2));
+  background: var(--first-color);
   color: var(--text-white);
   border-color: transparent;
 }
@@ -210,3 +210,4 @@
     border-radius: 14px 0 0 14px !important;
   }
 }
+

@@ -21,7 +21,7 @@
 }
 
 .portfolio_filter.is-active {
-  background: linear-gradient(135deg, var(--first-color), var(--accent-2));
+  background: var(--first-color);
   color: var(--text-white);
   border-color: transparent;
   box-shadow: var(--shadow-sm);
@@ -60,11 +60,7 @@
 }
 
 .portfolio_hover {
-  background: linear-gradient(
-    135deg,
-    rgba(255, 138, 76, 0.85),
-    rgba(72, 162, 255, 0.85)
-  );
+  background: var(--first-color);
   position: absolute;
   inset: 0;
   display: grid;
@@ -94,7 +90,7 @@
 .portfolio_modal {
   position: fixed;
   inset: 0;
-  background-color: hsla(0, 0%, 0%, 0.65);
+  background-color: #0f172ab0;
   z-index: 1200;
   display: grid;
   place-items: center;

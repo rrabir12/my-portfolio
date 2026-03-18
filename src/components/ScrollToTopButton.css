@@ -2,7 +2,7 @@
   position: fixed;
   bottom: 28px;
   right: 28px;
-  background: linear-gradient(135deg, var(--first-color), var(--accent-2));
+  background: var(--first-color);
   color: var(--text-white);
   border: none;
   padding: 12px 14px;
@@ -52,3 +52,4 @@
     display: none;
   }
 }
+

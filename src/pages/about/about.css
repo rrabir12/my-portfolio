@@ -125,7 +125,7 @@
 }
 
 .skills_filter.is-active {
-  background: linear-gradient(135deg, var(--first-color), var(--accent-2));
+  background: var(--first-color);
   color: var(--text-white);
   border-color: transparent;
 }
@@ -162,17 +162,90 @@
   display: grid;
   place-items: center;
   border-radius: 16px;
-  background: linear-gradient(
-    145deg,
-    rgba(255, 138, 76, 0.14),
-    rgba(255, 138, 76, 0.05)
-  );
-  border: 1px solid rgba(255, 138, 76, 0.24);
+  background: var(--body-color);
+  border: 1px solid var(--border-color);
 }
 
 .skill_logo {
   font-size: 1.9rem;
   color: var(--first-color);
+}
+
+.logo_manual_testing {
+  color: #ef4444;
+}
+
+.logo_unit_testing {
+  color: #22c55e;
+}
+
+.logo_integration_testing {
+  color: #8b5cf6;
+}
+
+.logo_playwright {
+  color: #2ead33;
+}
+
+.logo_postman {
+  color: #ff6c37;
+}
+
+.logo_jmeter {
+  color: #d22128;
+}
+
+.logo_javascript {
+  color: #f7df1e;
+}
+
+.logo_hooks,
+.logo_react {
+  color: #61dafb;
+}
+
+.logo_bootstrap {
+  color: #7952b3;
+}
+
+.logo_responsive {
+  color: #38bdf8;
+}
+
+.logo_usability {
+  color: #14b8a6;
+}
+
+.logo_firebase {
+  color: #ffca28;
+}
+
+.logo_figma {
+  color: #f24e1e;
+}
+
+.logo_html {
+  color: #e34f26;
+}
+
+.logo_css {
+  color: #1572b6;
+}
+
+.logo_tailwind {
+  color: #38bdf8;
+}
+
+.logo_php {
+  color: #777bb4;
+}
+
+.logo_mysql {
+  color: #4479a1;
+}
+
+.logo_softskill {
+  color: #f59e0b;
 }
 
 .skills_title {
@@ -204,7 +277,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  background: linear-gradient(135deg, var(--first-color), var(--accent-2));
+  background: var(--first-color);
   color: var(--text-white);
   width: 40px;
   height: 40px;
@@ -220,7 +293,7 @@
 }
 
 .resume_date {
-  background-color: rgba(255, 138, 76, 0.12);
+  background-color: var(--body-color);
   padding: 3px 12px;
   border-radius: 20px;
   font-size: var(--tiny-font-size);

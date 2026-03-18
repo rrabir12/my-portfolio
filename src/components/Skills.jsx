@@ -3,10 +3,12 @@ import { skills } from "../data";
 import { motion, AnimatePresence } from "framer-motion";
 import { smoothEase, smoothExit, sectionViewport } from "../utils/motion";
 import {
+  SiApachejmeter,
   SiFigma,
   SiHtml5,
   SiJavascript,
   SiCss3,
+  SiPostman,
   SiReact,
   SiTailwindcss,
   SiBootstrap,
@@ -19,7 +21,6 @@ import {
   FaBug,
   FaCheckCircle,
   FaPuzzlePiece,
-  FaFlask,
   FaTools,
   FaMobileAlt,
   FaUniversalAccess,
@@ -37,8 +38,8 @@ function Skills() {
     "Unit Testing": FaCheckCircle,
     "Integration Testing": FaPuzzlePiece,
     Playwright: FaTools,
-    Postman: FaTools,
-    JMeter: FaFlask,
+    Postman: SiPostman,
+    JMeter: SiApachejmeter,
     "JavaScript (ES6+)": SiJavascript,
     Hooks: FaCode,
     Bootstrap: SiBootstrap,
@@ -60,6 +61,35 @@ function Skills() {
     "Tailwind CSS": SiTailwindcss,
     PHP: SiPhp,
     MySQL: SiMysql,
+  };
+  const skillIconColors = {
+    "Manual Testing": "logo_manual_testing",
+    "Unit Testing": "logo_unit_testing",
+    "Integration Testing": "logo_integration_testing",
+    Playwright: "logo_playwright",
+    Postman: "logo_postman",
+    JMeter: "logo_jmeter",
+    "JavaScript (ES6+)": "logo_javascript",
+    Hooks: "logo_hooks",
+    Bootstrap: "logo_bootstrap",
+    "Responsive Design": "logo_responsive",
+    "Usability Testing": "logo_usability",
+    Firebase: "logo_firebase",
+    "User Research": "logo_softskill",
+    "Critical Thinking": "logo_softskill",
+    "Problem-Solving": "logo_softskill",
+    Adaptability: "logo_softskill",
+    "Team Collaboration": "logo_softskill",
+    "Project Management": "logo_softskill",
+    "Time Management": "logo_softskill",
+    "Communication & Presentation": "logo_softskill",
+    Figma: "logo_figma",
+    HTML5: "logo_html",
+    CSS3: "logo_css",
+    "React.js": "logo_react",
+    "Tailwind CSS": "logo_tailwind",
+    PHP: "logo_php",
+    MySQL: "logo_mysql",
   };
 
   // Categories generated from skills data
@@ -116,8 +146,9 @@ function Skills() {
       <motion.h2
         className="section_subtitle subtitle_center"
         initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.85, ease: smoothEase }}
+        viewport={sectionViewport}
       >
         My Skills
       </motion.h2>
@@ -143,11 +174,13 @@ function Skills() {
         className="skills_container container grid"
         variants={containerVariants}
         initial="hidden"
-        animate="visible"
+        whileInView="visible"
+        viewport={sectionViewport}
       >
         <AnimatePresence mode="popLayout" initial={false}>
           {filteredSkills.map(({ title }, index) => {
             const SkillIcon = skillIcons[title] || FaCode;
+            const logoColorClass = skillIconColors[title] || "";
 
             return (
               <motion.div
@@ -163,7 +196,7 @@ function Skills() {
                 aria-label={title}
               >
                 <div className="skill_logo_wrap" aria-hidden="true">
-                  <SkillIcon className="skill_logo" />
+                  <SkillIcon className={`skill_logo ${logoColorClass}`} />
                 </div>
                 <h3 className="skills_title">{title}</h3>
               </motion.div>
