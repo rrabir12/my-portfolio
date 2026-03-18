@@ -4,6 +4,9 @@ export const hoverEase = [0.25, 0.8, 0.25, 1];
 
 export const sectionViewport = { once: false, amount: 0.2 };
 
+// Trigger when a section header is halfway visible
+export const skillHalfViewport = { once: false, amount: 0.5 };
+
 export const staggerContainer = {
   hidden: {},
   visible: {
