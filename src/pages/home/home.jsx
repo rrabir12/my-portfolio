@@ -35,18 +35,9 @@ function Home() {
       viewport={sectionViewport}
       variants={staggerContainer}
     >
-      <div className="shooting_stars" aria-hidden="true">
-        <span className="shooting_star star_one" />
-        <span className="shooting_star star_two" />
-        <span className="shooting_star star_three" />
-        <span className="star_dot dot_one" />
-        <span className="star_dot dot_two" />
-        <span className="star_dot dot_three" />
-      </div>
-
       <div className="container home_container">
         <motion.div className="home_content" variants={contentVariants}>
-          <span className="badge">Open to QA Opportunities</span>
+          <span className="badge">Kathmandu, Nepal — NPT (UTC+5:45)</span>
 
           <h1 className="home_title">Rabi Roy</h1>
           <p className="home_subtitle">
