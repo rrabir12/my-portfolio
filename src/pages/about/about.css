@@ -106,6 +106,10 @@
   margin-bottom: 40px;
 }
 
+.skills {
+  scroll-margin-top: 90px;
+}
+
 .skills_filters {
   display: flex;
   flex-wrap: wrap;

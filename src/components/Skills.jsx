@@ -33,7 +33,9 @@ import {
 
 function Skills() {
   const [activeTab, setActiveTab] = useState("All");
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(() =>
+    typeof window !== "undefined" ? window.innerWidth <= 576 : false
+  );
   const [visibleCount, setVisibleCount] = useState(0);
 
   React.useEffect(() => {

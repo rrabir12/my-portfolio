@@ -28,7 +28,8 @@
 }
 
 .portfolio_container {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
 }
 
 .portfolio_item {
@@ -217,8 +218,13 @@
 }
 
 @media screen and (max-width: 576px) {
+  .portfolio {
+    scroll-margin-top: 90px;
+  }
+
   .portfolio_container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    gap: 16px;
   }
 
   .portfolio_modal {

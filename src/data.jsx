@@ -165,7 +165,7 @@ export const resume = [
     category: "experience",
     icon: <FaBriefcase />,
     year: "Dec 2025 - Present",
-    title: "QA and Technical Support Engineer <span> Slash Plus, Nepal </span>",
+    title: "Software QA Engineer <span> Slash Plus, Nepal </span>",
     desc: [
       "Performed manual and automation testing to ensure software quality and stability.",
       "Created and executed test cases, reported bugs, and verified fixes.",
@@ -232,7 +232,7 @@ export const skills = [
   {
     id: 1,
     category: "Testing & QA",
-    title: "Manual Testing",
+    title: "Manual/Automation Testing",
   },
   {
     id: 2,
@@ -324,46 +324,46 @@ export const skills = [
     category: "Backend & Databases",
     title: "MySQL",
   },
-  {
-    id: 20,
-    category: "Soft Skills",
-    title: "User Research",
-  },
-  {
-    id: 21,
-    category: "Soft Skills",
-    title: "Critical Thinking",
-  },
-  {
-    id: 22,
-    category: "Soft Skills",
-    title: "Problem-Solving",
-  },
-  {
-    id: 23,
-    category: "Soft Skills",
-    title: "Adaptability",
-  },
-  {
-    id: 24,
-    category: "Soft Skills",
-    title: "Team Collaboration",
-  },
-  {
-    id: 25,
-    category: "Soft Skills",
-    title: "Project Management",
-  },
-  {
-    id: 26,
-    category: "Soft Skills",
-    title: "Time Management",
-  },
-  {
-    id: 27,
-    category: "Soft Skills",
-    title: "Communication & Presentation",
-  },
+  // {
+  //   id: 20,
+  //   category: "Soft Skills",
+  //   title: "User Research",
+  // },
+  // {
+  //   id: 21,
+  //   category: "Soft Skills",
+  //   title: "Critical Thinking",
+  // },
+  // {
+  //   id: 22,
+  //   category: "Soft Skills",
+  //   title: "Problem-Solving",
+  // },
+  // {
+  //   id: 23,
+  //   category: "Soft Skills",
+  //   title: "Adaptability",
+  // },
+  // {
+  //   id: 24,
+  //   category: "Soft Skills",
+  //   title: "Team Collaboration",
+  // },
+  // {
+  //   id: 25,
+  //   category: "Soft Skills",
+  //   title: "Project Management",
+  // },
+  // {
+  //   id: 26,
+  //   category: "Soft Skills",
+  //   title: "Time Management",
+  // },
+  // {
+  //   id: 27,
+  //   category: "Soft Skills",
+  //   title: "Communication & Presentation",
+  // },
 ];
 
 export const portfolio = [

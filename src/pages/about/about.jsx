@@ -18,6 +18,15 @@ import {
 function About() {
   return (
     <section className="section container" id="about">
+      <div className="shooting_stars" aria-hidden="true">
+        <span className="shooting_star star_one" />
+        <span className="shooting_star star_two" />
+        <span className="shooting_star star_three" />
+        <span className="star_dot dot_one" />
+        <span className="star_dot dot_two" />
+        <span className="star_dot dot_three" />
+      </div>
+
       {/* About Section */}
       <motion.section
         className="about"

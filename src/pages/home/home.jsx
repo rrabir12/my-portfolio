@@ -35,13 +35,22 @@ function Home() {
       viewport={sectionViewport}
       variants={staggerContainer}
     >
+      <div className="shooting_stars" aria-hidden="true">
+        <span className="shooting_star star_one" />
+        <span className="shooting_star star_two" />
+        <span className="shooting_star star_three" />
+        <span className="star_dot dot_one" />
+        <span className="star_dot dot_two" />
+        <span className="star_dot dot_three" />
+      </div>
+
       <div className="container home_container">
         <motion.div className="home_content" variants={contentVariants}>
           <span className="badge">Open to QA Opportunities</span>
 
           <h1 className="home_title">Rabi Roy</h1>
           <p className="home_subtitle">
-            Software Quality Assurance & Technical Support Engineer
+            Software QA Engineer
           </p>
 
           <div className="home_roles">
@@ -60,11 +69,7 @@ function Home() {
           </div>
 
           <p className="home_description">
-            Software Quality Assurance & Technical Support Engineer with
-            hands-on experience in manual and automation testing, test case
-            creation, API and performance testing, and customer issue
-            resolution. Driven by continuous learning and building reliable,
-            user-centered software products.
+            Software QA Engineer with 1+ year of experience in manual, automation, API, and performance testing. Passionate about delivering high-quality software through Playwright, Postman, SQL, and JMeter, with hands-on experience testing enterprise applications.
           </p>
 
           <div className="home_actions">

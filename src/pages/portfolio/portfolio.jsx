@@ -23,7 +23,7 @@ function Portfolio() {
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.55, ease: smoothEase, staggerChildren: 0.1, delayChildren: 0.06 },
+      transition: { duration: 0.62, ease: smoothEase, staggerChildren: 0.06, delayChildren: 0.03 },
     },
   };
 
@@ -35,6 +35,14 @@ function Portfolio() {
       whileInView="visible"
       viewport={sectionViewport}
     >
+      <div className="shooting_stars" aria-hidden="true">
+        <span className="shooting_star star_one" />
+        <span className="shooting_star star_two" />
+        <span className="shooting_star star_three" />
+        <span className="star_dot dot_one" />
+        <span className="star_dot dot_two" />
+        <span className="star_dot dot_three" />
+      </div>
       {/* Section Title */}
       <motion.h2
         className="section_title"
@@ -90,9 +98,9 @@ function Portfolio() {
                 y: 0,
                 scale: 1,
                 transition: {
-                  duration: 0.72,
+                  duration: 0.6,
                   ease: smoothEase,
-                  delay: itemIndex * 0.07,
+                  delay: itemIndex * 0.05,
                 },
               }),
               exit: ({ index: itemIndex, total }) => ({
@@ -100,9 +108,9 @@ function Portfolio() {
                 y: 10,
                 scale: 0.99,
                 transition: {
-                  duration: 0.3,
+                  duration: 0.26,
                   ease: smoothExit,
-                  delay: (total - itemIndex - 1) * 0.03,
+                  delay: (total - itemIndex - 1) * 0.02,
                 },
               }),
             };
