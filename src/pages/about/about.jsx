@@ -30,7 +30,7 @@ function About() {
           About <span>Me</span>
         </motion.h2>
         <motion.p className="section_intro" variants={fadeInUp}>
-          QA and Technical Support Engineer with hands-on experience in manual
+          Software - QA Engineer with hands-on experience in manual
           and automation testing, API/performance testing, and issue
           resolution. My frontend and UI/UX background helps me catch
           usability and functional issues early.
